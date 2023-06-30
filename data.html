@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02.연계데이터_입력_관리자용</title>
+    <link rel="stylesheet" href="./resources/css/jquery-ui.css">
+    <link rel="stylesheet" href="./resources/css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="./resources/css/data.css">
+    <script src="./resources/js/jquery-3.7.0.min.js" defer></script>
+    <script src="./resources/js/jquery-ui.js" defer></script>
+    <script src="./resources/js/data.js" defer></script>
+</head>
+<body>
+    <h2 class="ai-title">공무원범죄대장</h2>
+
+    <form action="#" class="data-form verBlue">
+        <h3 class="data-form-title">연계 데이터</h3>
+        <ul class="data-form-ul">
+            <li>
+                <div class="inputTit">조회년도</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="2023년도">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">성명</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="김영호">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">관활기관</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="대구서부교육지원청">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">소속</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="대구서도초등학교">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">처분일자</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="2023-03-20">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">처분종류</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="징계">
+                </div>
+            </li>
+            <li class="w100">
+                <div class="inputTit">처분내용</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="정직 처리">
+                </div>
+            </li>
+        </ul>
+    </form>
+
+    <form action="#" class="data-form verYellow">
+        <h3 class="data-form-title">추가정보 및 범죄정보 입력</h3>
+        <ul class="data-form-ul">
+            <li>
+                <div class="inputTit">직급</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="교사 행정 7급">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">생년월일</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="1996-11-12">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">범죄명</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="폭행 및 상해">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">비위유형</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="품위 유지의 의무 위반">
+                </div>
+            </li>
+            <li class="w100">
+                <div class="inputTit">범죄내용</div>
+                <div class="inputBox">
+                    <textarea name="" id="target-textarea" cols="30" rows="2" placeholder="만취 상태에서 길에서 행인에 대한 시비, 폭행으로 전치 4주에 해당하는 상해를 범하였음."></textarea>
+                </div>
+            </li>
+        </ul>
+    </form>
+
+    <form action="#" class="data-form verYellow">
+        <h3 class="data-form-title">수사기관 정보 입력</h3>
+        <table class="data-form-tbl data-form-add1">
+            <colgroup>
+                <col style="width:16%">
+                <col style="width:18%">
+                <col style="width:18%">
+                <col style="width:13%">
+                <col style="width:17%">
+                <col style="width:18%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">접수일자</th>
+                    <th scope="col">사건번호</th>
+                    <th scope="col">기관명</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">관련자료</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="data-form-addCon">
+                    <td scope="row" data-label="접수일자">
+                        <input type="text" id="applyDate0" title="접수일자" name="applyDate" class="applyDate" value="">
+                    </td>
+                    <td data-label="사건번호">
+                        <input type="text" name="" id="" placeholder="2023-0210-B14287">
+                    </td>
+                    <td data-label="기관명">
+                        <input type="text" name="" id="" placeholder="대구서부경찰서">
+                    </td>
+                    <td data-label="상태">
+                        <select name="" id="">
+                            <option value="">수사개시</option>
+                            <option value="">상황통보</option>
+                            <option value="">처분결과</option>
+                        </select>
+                    </td>
+                    <td data-label="내용">
+                        <input type="text" name="" id="" placeholder="수사개시">
+                    </td>
+                    <td data-label="관련자료">
+                        <input type="file">
+                    </td>
+                </tr>
+                <tr class="data-form-addCon">
+                    <td scope="row" data-label="접수일자">
+                        <input type="text" id="applyDate1" title="접수일자" name="applyDate" class="applyDate" value="">
+                    </td>
+                    <td data-label="사건번호">
+                        <input type="text" name="" id="" placeholder="2023-0210-B14287">
+                    </td>
+                    <td data-label="기관명">
+                        <input type="text" name="" id="" placeholder="대구서부경찰서">
+                    </td>
+                    <td data-label="상태">
+                        <select name="" id="">
+                            <option value="">수사개시</option>
+                            <option value="">상황통보</option>
+                            <option value="">처분결과</option>
+                        </select>
+                    </td>
+                    <td data-label="내용">
+                        <input type="text" name="" id="" placeholder="수사개시">
+                    </td>
+                    <td data-label="관련자료">
+                        <input type="file">
+                    </td>
+                </tr>
+                <tr class="data-form-addCon">
+                    <td scope="row" data-label="접수일자">
+                        <input type="text" id="applyDate" title="접수일자" name="applyDate" class="applyDate" value="">
+                    </td>
+                    <td data-label="사건번호">
+                        <input type="text" name="" id="" placeholder="2023-0210-B14287">
+                    </td>
+                    <td data-label="기관명">
+                        <input type="text" name="" id="" placeholder="대구서부경찰서">
+                    </td>
+                    <td data-label="상태">
+                        <select name="" id="">
+                            <option value="">수사개시</option>
+                            <option value="">상황통보</option>
+                            <option value="">처분결과</option>
+                        </select>
+                    </td>
+                    <td data-label="내용">
+                        <input type="text" name="" id="" placeholder="수사개시">
+                    </td>
+                    <td data-label="관련자료">
+                        <input type="file">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="data-form-btns">
+            <a class="data-form-btn-add" id="btnAdd" href="javascript:;">추가입력</a>
+            <a class="data-form-btn-file" id="btnFile" href="javascript:;">관련 자료 등록</a>
+        </div>
+
+    </form>
+
+    <form action="#" class="data-form verYellow">
+        <h3 class="data-form-title">관활기관 처리 정보 입력</h3>
+        <table class="data-form-tbl data-form-add2">
+            <colgroup>
+                <col style="width:16%">
+                <col style="width:18%">
+                <col style="width:48%">
+                <col style="width:18%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">접수일자</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">관련자료</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="data-form-addCon">
+                    <td scope="row" data-label="접수일자">
+                        <input type="text" id="applyDate" title="접수일자" name="applyDate" class="applyDate" value="">
+                    </td>
+                    <td data-label="구분">
+                        <select name="" id="">
+                            <option value="">내부종결</option>
+                            <option value="">징계요구신청</option>
+                            <option value="">징계요구</option>
+                            <option value="">징계의결</option>
+                            <option value="">징계처분</option>
+                        </select>
+                    </td>
+                    <td data-label="내용">
+                        <input type="text" name="" id="" placeholder="내부종결">
+                    </td>
+                    <td data-label="관련자료">
+                        <input type="file">
+                    </td>
+                </tr>
+                <tr class="data-form-addCon">
+                    <td scope="row" data-label="접수일자">
+                        <input type="text" id="applyDate" title="접수일자" name="applyDate" class="applyDate" value="">
+                    </td>
+                    <td data-label="구분">
+                        <select name="" id="">
+                            <option value="">내부종결</option>
+                            <option value="">징계요구신청</option>
+                            <option value="">징계요구</option>
+                            <option value="">징계의결</option>
+                            <option value="">징계처분</option>
+                        </select>
+                    </td>
+                    <td data-label="내용">
+                        <input type="text" name="" id="" placeholder="중징계 요청">
+                    </td>
+                    <td data-label="관련자료">
+                        <input type="file">
+                    </td>
+                </tr>
+                <tr class="data-form-addCon">
+                    <td scope="row" data-label="접수일자">
+                        <input type="text" id="applyDate" title="접수일자" name="applyDate" class="applyDate" value="">
+                    </td>
+                    <td data-label="구분">
+                        <select name="" id="">
+                            <option value="">내부종결</option>
+                            <option value="">징계요구신청</option>
+                            <option value="">징계요구</option>
+                            <option value="">징계의결</option>
+                            <option value="">징계처분</option>
+                        </select>
+                    </td>
+                    <td data-label="내용">
+                        <input type="text" name="" id="" placeholder="중징계 처리">
+                    </td>
+                    <td data-label="관련자료">
+                        <input type="file">
+                    </td>
+                </tr>
+                <tr class="data-form-addCon">
+                    <td scope="row" data-label="접수일자">
+                        <input type="text" id="applyDate" title="접수일자" name="applyDate" class="applyDate" value="">
+                    </td>
+                    <td data-label="구분">
+                        <select name="" id="">
+                            <option value="">내부종결</option>
+                            <option value="">징계요구신청</option>
+                            <option value="">징계요구</option>
+                            <option value="">징계의결</option>
+                            <option value="">징계처분</option>
+                        </select>
+                    </td>
+                    <td data-label="내용">
+                        <input type="text" name="" id="" placeholder="감봉">
+                    </td>
+                    <td data-label="관련자료">
+                        <input type="file">
+                    </td>
+                </tr>
+                <tr class="data-form-addCon">
+                    <td scope="row" data-label="접수일자">
+                        <input type="text" id="applyDate" title="접수일자" name="applyDate" class="applyDate" value="">
+                    </td>
+                    <td data-label="구분">
+                        <select name="" id="">
+                            <option value="">내부종결</option>
+                            <option value="">징계요구신청</option>
+                            <option value="">징계요구</option>
+                            <option value="">징계의결</option>
+                            <option value="">징계처분</option>
+                        </select>
+                    </td>
+                    <td data-label="내용">
+                        <input type="text" name="" id="" placeholder="감봉 1월">
+                    </td>
+                    <td data-label="관련자료">
+                        <input type="file">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="data-form-btns">
+            <a class="data-form-btn-add" id="btnAdd2" href="javascript:;">추가입력</a>
+            <a class="data-form-btn-file" id="btnFile2" href="javascript:;">관련 자료 등록</a>
+        </div>
+    </form>
+
+    <form action="#" class="data-form verYellow">
+        <h3 class="data-form-title">처분결과 입력</h3>
+        <ul class="data-form-ul">
+            <li>
+                <div class="inputTit">처분결과</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="정직 1월">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">처분결과통보</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="2023년03월18일 감사처리">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">담당부서</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="감사부">
+                </div>
+            </li>
+            <li>
+                <div class="inputTit">담당자</div>
+                <div class="inputBox">
+                    <input type="text" name="" id="" placeholder="황우성">
+                </div>
+            </li>
+            <li class="w100">
+                <div class="inputTit">비고</div>
+                <div class="inputBox">
+                    <textarea name="" id="target-textarea" cols="30" rows="2" placeholder="내부 종결"></textarea>
+                </div>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
