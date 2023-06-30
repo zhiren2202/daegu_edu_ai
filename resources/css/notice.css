@@ -293,16 +293,16 @@ a {
     border: 1px solid #74b2f3 ;
 }
 .notice_page_arr_first {
-    background: transparent url(/resources/imgs/paging_first.png) no-repeat center / 40%;
+    background: transparent url(../imgs/paging_first.png) no-repeat center / 40%;
 }
 .notice_page_arr_prev {
-    background: transparent url(/resources/imgs/paging_prev.png) no-repeat center / 22%;
+    background: transparent url(../imgs/paging_prev.png) no-repeat center / 22%;
 }
 .notice_page_arr_next {
-    background: transparent url(/resources/imgs/paging_next.png) no-repeat center / 22%;
+    background: transparent url(../imgs/paging_next.png) no-repeat center / 22%;
 }
 .notice_page_arr_last {
-    background: transparent url(/resources/imgs/paging_last.png) no-repeat center / 40%;
+    background: transparent url(../imgs/paging_last.png) no-repeat center / 40%;
 }
 
 .notice_pageNums {
