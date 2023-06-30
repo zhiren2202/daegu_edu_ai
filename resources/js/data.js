@@ -20,7 +20,6 @@ $(function () {
     $('#applyDate0').datepicker('setDate', 'today');
   });
 
-
   $(function () {
     $("#applyDate1").datepicker({
       changeMonth: true,
@@ -29,7 +28,7 @@ $(function () {
     $('#applyDate1').datepicker('setDate', 'today');
   });
 
-  // 동적 태그 만들기
+// 추가 입력
 $(function () {
   var cnt = 0;
 
