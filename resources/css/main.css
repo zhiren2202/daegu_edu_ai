@@ -127,8 +127,12 @@ li {
 }
 
 .apply-tbl_tbody .inputBox {
-    width: 6em;
-    margin: 0.2em 0;
+    width: auto;
+    margin: 0.2em 0.5em;
+}
+
+.apply-tbl_tbody label {
+    word-break: keep-all;
 }
 
 .apply-tbl input {
@@ -171,7 +175,7 @@ li {
 }
 
 .apply-tbl input[type="tel"] {
-    width: 35%;
+    width: 20em;
     height: 2.778em;
     padding: 1em;
     text-align: right;
@@ -238,11 +242,32 @@ li {
 }
 
 @media screen and (max-width:570px) {
+    .apply-tbl_thead {
+        width: 6em;
+        padding: 0 0.5em;
+    }
+    .apply-tbl_tbody {
+        width: calc(100% - 6em);
+    }
+    .apply-tbl input[type="tel"] {
+        width: calc(100% - 1.2em);
+    }
+
     [class*='apply-btn-'] {
         width: 100%;
         clear: both;
     }
     .apply-btn-reset {
         margin-bottom: 1%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .apply-tbl_thead {
+        width: 5em;
+        padding: 0;
+    }
+    .apply-tbl_tbody {
+        width: calc(100% - 5em);
     }
 }

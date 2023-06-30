@@ -123,21 +123,21 @@ li {
 }
 
 .data-form-ul .inputTit{
-    width: 11em;
+    width: 10em;
     font-weight: 500;
     text-align: left;
     padding: 0 2em;
 }
 
 .data-form-ul .inputBox {
-    width: calc(100% - 11em);
-    padding: 0 1em;
+    width: calc(100% - 10em);
+    padding: 0 1.5em;
 }
 
 .data-form input,
 .data-form select,
 .data-form textarea {
-    height: 2.778em;
+    height: 2.667em;
     font-weight: 500;
     border-radius: 0.3em;
     vertical-align: middle;
@@ -145,7 +145,7 @@ li {
 
 .data-form-ul [type="text"],
 .data-form-ul textarea {
-    width: 85%;
+    width: calc(100% - 2em);
     padding: 1em;
 }
 
@@ -157,7 +157,7 @@ li {
 
 /* Table CSS - Blue */
 .verBlue ul li [class*='input'] {
-    border-bottom: 1px solid #c8c8c8;
+    border-bottom: 1px solid #89bbe2;
 }
 
 .verBlue ul li:last-child [class*='input'] {
@@ -347,7 +347,7 @@ li {
     background: #fff url(../imgs/calender.png) no-repeat right 12px center / 1.2em 1.2em;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1200px) {
     .data-form-tbl colgroup,
     .data-form-tbl thead {
         display: none;
@@ -409,6 +409,12 @@ li {
     }
 }
 
+@media screen and (max-width: 650px) {
+    .data-form-tbl tbody tr {
+        margin-bottom: 1em;
+    }
+}
+
 .data-form-btns {
     position: absolute;
     top: 0;
@@ -420,13 +426,13 @@ li {
 }
 
 [class*='data-form-btn-'] {
-    padding: 0.2em 2em;
+    padding: 0.2em 0.8em;
     padding-bottom: 0.4em;
     background-color: #2689ec;
     border: 1px solid #002261;
     border-radius: 0.3em;
     color: #fff;
-    font-size: 1.389em;
+    font-size: 1em;
     font-weight: 500;
     word-break: keep-all;
     position: relative;
