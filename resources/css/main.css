@@ -207,6 +207,10 @@ li {
     cursor: pointer;
 }
 
+[class*='apply-btn-'] img {
+    margin: 0 0 0.3em 0.3em;
+}
+
 
 @media screen and (max-width:1280px) {
     .apply-tbl input[type="text"] {
@@ -233,7 +237,7 @@ li {
     }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:570px) {
     [class*='apply-btn-'] {
         width: 100%;
         clear: both;

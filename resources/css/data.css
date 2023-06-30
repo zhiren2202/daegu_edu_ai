@@ -421,6 +421,7 @@ li {
 
 [class*='data-form-btn-'] {
     padding: 0.2em 2em;
+    padding-bottom: 0.4em;
     background-color: #2689ec;
     border: 1px solid #002261;
     border-radius: 0.3em;
@@ -428,10 +429,16 @@ li {
     font-size: 1.389em;
     font-weight: 500;
     word-break: keep-all;
+    position: relative;
 }
 
 [class*='data-form-btn-']:hover {
     cursor: pointer;
+}
+
+[class*='data-form-btn-'] span,
+[class*='data-form-btn-'] img {
+    vertical-align: middle;
 }
 
 @media screen and (max-width:990px) {
