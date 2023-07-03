@@ -75,6 +75,13 @@ li {
     margin: 1em;
 }
 
+.apply-tbl-list {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 10em;
+}
+
 .apply-tbl {
     width: 90%;
     max-width: 80em;
@@ -215,14 +222,13 @@ li {
     margin: 0 0 0.3em 0.3em;
 }
 
-
 @media screen and (max-width:1280px) {
     .apply-tbl input[type="text"] {
         width: 100%;
     }
 }
 
-@media screen and (max-width:880px) {
+@media screen and (max-width:890px) {
     .apply-tbl_thead {
         width: 7.2em;
     }
@@ -269,5 +275,52 @@ li {
     }
     .apply-tbl_tbody {
         width: calc(100% - 5em);
+    }
+}
+
+/* 모바일 2단 */
+@media screen and (max-width:1280px) {
+    .moDouble .w50 {
+        width: 50%;
+        float: left;
+    }
+    .moDouble .apply-tbl_thead {
+        width: 8em;
+    }
+    .moDouble .apply-tbl_tbody {
+        width: calc(100% - 8em);
+    }
+    .moDouble input[type="tel"] {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:890px) {
+    .moDouble input[type="tel"] {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:710px) {
+    .moDouble .w50 {
+        width: 100%;
+    }
+    .moDouble .apply-tbl_thead {
+        width: 7.2em;
+    }
+    .moDouble .apply-tbl_tbody {
+        width: calc(100% - 7.2em);
+    }
+    .moDouble input[type="tel"] {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .moDouble .apply-tbl_thead {
+        width: 6em;
+    }
+    .moDouble .apply-tbl_tbody {
+        width: calc(100% - 6em);
     }
 }
