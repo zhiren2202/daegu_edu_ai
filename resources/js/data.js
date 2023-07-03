@@ -28,6 +28,118 @@ $(function () {
     $('#applyDate1').datepicker('setDate', 'today');
   });
 
+  $(function () {
+    $("#applyDate2").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2').datepicker('setDate', 'today');
+  });
+
+  $(function () {
+      $("#applyDate3").datepicker({
+        changeMonth: true,
+        changeYear: true,
+      });
+      $('#applyDate3').datepicker('setDate', 'today');
+    });
+  
+    $(function () {
+      $("#applyDate4").datepicker({
+        changeMonth: true,
+        changeYear: true,
+      });
+      $('#applyDate4').datepicker('setDate', 'today');
+    });
+  
+    $(function () {
+      $("#applyDate5").datepicker({
+        changeMonth: true,
+        changeYear: true,
+      });
+      $('#applyDate5').datepicker('setDate', 'today');
+    });
+
+  $(function () {
+    $("#applyDate2_0").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2_0').datepicker('setDate', 'today');
+  });
+
+  $(function () {
+    $("#applyDate2_1").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2_1').datepicker('setDate', 'today');
+  });
+
+  $(function () {
+    $("#applyDate2_2").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2_2').datepicker('setDate', 'today');
+  });
+
+  $(function () {
+    $("#applyDate2_3").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2_3').datepicker('setDate', 'today');
+  });
+
+  $(function () {
+    $("#applyDate2_4").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2_4').datepicker('setDate', 'today');
+  });
+
+  $(function () {
+    $("#applyDate2_5").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2_5').datepicker('setDate', 'today');
+  });
+
+  $(function () {
+    $("#applyDate2_6").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2_6').datepicker('setDate', 'today');
+  });
+
+  $(function () {
+    $("#applyDate2_7").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2_7').datepicker('setDate', 'today');
+  });
+
+  $(function () {
+    $("#applyDate2_8").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2_8').datepicker('setDate', 'today');
+  });
+
+  $(function () {
+    $("#applyDate2_9").datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+    $('#applyDate2_9').datepicker('setDate', 'today');
+  });
+
 // 추가 입력
 $(function () {
   var cnt = 0;
