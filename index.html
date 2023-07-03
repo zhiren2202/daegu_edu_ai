@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2 class="ai-title">계약심사 신청</h2>
-    <form action="#">
+    <form action="#" class="apply-tbl-list">
         <ul class="apply-tbl">
             <li>
                 <span class="apply-tbl_thead">공고기관</span>
@@ -84,5 +84,85 @@
             </button>
         </div>
     </form>
+
+    
+    <h2 class="ai-title">계약심사 신청 (모바일 2단)</h2>
+    <form action="#" class="apply-tbl-list">
+        <ul class="apply-tbl moDouble">
+            <li>
+                <span class="apply-tbl_thead">공고기관</span>
+                <div class="apply-tbl_tbody radioFlex">
+                        <div class="inputBox">
+                            <input type="radio" name="submit3-radio" id="submit3-radio1" checked>
+                            <label for="submit3-radio1">학교</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="radio" name="submit3-radio" id="submit3-radio2">
+                            <label for="submit3-radio2">지원청</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="radio" name="submit3-radio" id="submit3-radio3">
+                            <label for="submit3-radio3">직속기관</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="radio" name="submit3-radio" id="submit3-radio4">
+                            <label for="submit3-radio4">교육청</label>
+                        </div>
+                </div>
+            </li>
+            <li>
+                <span class="apply-tbl_thead">심사분야</span>
+                <div class="apply-tbl_tbody radioFlex">
+                        <div class="inputBox">
+                            <input type="radio" name="submit4-radio" id="submit4-radio1" checked>
+                            <label for="submit4-radio1">물품</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="radio" name="submit4-radio" id="submit4-radio2">
+                            <label for="submit4-radio2">공사</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="radio" name="submit4-radio" id="submit4-radio3">
+                            <label for="submit4-radio3">용역</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="radio" name="submit4-radio" id="submit4-radio4">
+                            <label for="submit4-radio4">기타</label>
+                        </div>
+                </div>
+            </li>
+            <li>
+                <span class="apply-tbl_thead">사업명</span>
+                <div class="apply-tbl_tbody">
+                    <input type="text" name="" id="" placeholder="교육행정 컴퓨터 구매">
+                </div>
+            </li>
+            <li class="w50">
+                <span class="apply-tbl_thead">예산금액</span>
+                <div class="apply-tbl_tbody">
+                    <input type="tel" class="red">
+                    <label for="">원</label>
+                </div>
+            </li>
+            <li class="w50">
+                <span class="apply-tbl_thead">추정금액</span>
+                <div class="apply-tbl_tbody">
+                    <input type="tel" class="blue">
+                    <label for="">원</label>
+                </div>
+            </li>
+        </ul>
+        <div class="apply-btns">
+            <button type="reset" class="apply-btn-reset">
+                다시 입력
+                <img src="./resources/imgs/btn_arr.png" alt="화살표">
+            </button>
+            <button type="submit" class="apply-btn-submit">
+                시뮬레이션 실행
+                <img src="./resources/imgs/btn_arr.png" alt="화살표">
+            </button>
+        </div>
+    </form>
+
 </body>
 </html>
