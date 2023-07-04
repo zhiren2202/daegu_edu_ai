@@ -205,6 +205,7 @@ li {
 
 [class*='apply-btn-'] {
     padding: 0.5em 2em;
+    padding-right: 3em;
     background-color: #2689ec;
     border: 1px solid #002261;
     border-radius: 0.3em;
@@ -212,14 +213,22 @@ li {
     font-size: 1.389em;
     font-weight: 500;
     word-break: keep-all;
+    position: relative;
 }
 
 [class*='apply-btn-']:hover {
     cursor: pointer;
 }
 
-[class*='apply-btn-'] img {
-    margin: 0 0 0.3em 0.3em;
+[class*='apply-btn-'] span::after {
+    content: '';
+    display: inline-block;
+    background: transparent url(../imgs/btn_arr.png) no-repeat center;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
 }
 
 @media screen and (max-width:1280px) {
@@ -254,6 +263,10 @@ li {
     }
     .apply-tbl_tbody {
         width: calc(100% - 6em);
+        padding: 0.5em;
+    }
+    .apply-tbl_tbody.radioFlex {
+        padding: 0.5em;
     }
     .apply-tbl input[type="tel"] {
         width: calc(100% - 1.2em);
@@ -275,6 +288,15 @@ li {
     }
     .apply-tbl_tbody {
         width: calc(100% - 5em);
+    }
+}
+
+@media screen and (max-width:280px) {
+    [class*='apply-btn-'] {
+        padding: 0.5em 2em;
+    }
+    [class*='apply-btn-'] span::after {
+        content: none;
     }
 }
 
@@ -316,11 +338,24 @@ li {
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:570px) {
     .moDouble .apply-tbl_thead {
         width: 6em;
     }
     .moDouble .apply-tbl_tbody {
         width: calc(100% - 6em);
+    }
+    .moDouble input[type="tel"] {
+        width: calc(100% - 1.2em);
+    }
+}
+
+@media screen and (max-width:320px) {
+    .moDouble .apply-tbl_thead {
+        width: 5em;
+        padding: 0;
+    }
+    .moDouble .apply-tbl_tbody {
+        width: calc(100% - 5em);
     }
 }

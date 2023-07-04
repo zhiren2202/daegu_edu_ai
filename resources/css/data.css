@@ -267,12 +267,12 @@ li {
 }
 @media screen and (max-width:768px) {
     .data-form-ul .inputTit {
-        width: 8em;
+        width: 7.5em;
         padding: 0 0.5em;
     }
 
     .data-form-ul .inputBox {
-        width: calc(100% - 8em);
+        width: calc(100% - 7.5em);
     }
 }
 @media screen and (max-width:600px) {
@@ -358,6 +358,9 @@ li {
     .data-form-tbl tbody tr {
         display: block;
         margin-bottom: 2em;
+    }
+    .data-form-tbl tbody tr:last-child {
+        margin-bottom: 1em;
     }
     .data-form-tbl tbody tr td {
         width: 100%;
@@ -468,7 +471,7 @@ li {
 
 .data-form-btns {
     position: absolute;
-    top: 0;
+    top: 0.5em;
     left: 50%;
     transform: translate(-50%,0);
     width: 90%;
@@ -477,8 +480,7 @@ li {
 }
 
 [class*='data-form-btn-'] {
-    padding: 0.2em 0.8em;
-    padding-bottom: 0.4em;
+    padding: 0.3em 3em 0.3em 1.5em;
     background-color: #2689ec;
     border: 1px solid #002261;
     border-radius: 0.3em;
@@ -489,25 +491,30 @@ li {
     position: relative;
 }
 
+.data-form-btn-add {
+    margin-right: 0.3em;
+}
+
+[class*='data-form-btn-'] span::after {
+    content: '';
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.data-form-btn-add span::after {
+    background: transparent url(../imgs/btn_add.png) no-repeat center / 60%;
+}
+
+.data-form-btn-file span::after {
+    background: transparent url(../imgs/btn_file.png) no-repeat center / 60%;
+}
+
 [class*='data-form-btn-']:hover {
     cursor: pointer;
-}
-
-[class*='data-form-btn-'] .btnIcon {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-}
-.data-form-btn-add .btnIcon {
-    background: #2689ec url(../imgs/btn_add.png) no-repeat center;
-}
-.data-form-btn-file .btnIcon {
-    background: #2689ec url(../imgs/btn_file.png) no-repeat center;
-}
-
-[class*='data-form-btn-'] span,
-[class*='data-form-btn-'] img {
-    vertical-align: middle;
 }
 
 @media screen and (max-width:990px) {
@@ -519,8 +526,9 @@ li {
         overflow: hidden;
     }
     [class*='data-form-btn-'] {
-        padding: 0.5em 0.2em;
-        width: 49%;
+        padding: 1em 0.2em;
+        padding-right: 1em;
+        width: 49.5%;
         float: left;
         text-align: center;
     }
