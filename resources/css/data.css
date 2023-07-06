@@ -118,20 +118,21 @@ li {
     width: 100%;
 }
 
-.data-form-ul [class*='input'] {
+/* .data-form-ul [class*='input'] {
     line-height: 4em;
-}
+} */
 
 .data-form-ul .inputTit{
     width: 10em;
     font-weight: 500;
     text-align: left;
-    padding: 0 1em;
+    padding: 1em;
+    padding-top: 1.6em;
 }
 
 .data-form-ul .inputBox {
     width: calc(100% - 10em);
-    padding: 0 1.5em;
+    padding: 1em 1.5em;
 }
 
 .data-form input,
@@ -252,7 +253,6 @@ li {
 @media screen and (max-width:1000px) {
     .data-form-ul .inputTit {
         width: 9em;
-        padding: 0 1em;
     }
 
     .data-form-ul .inputBox {
@@ -268,11 +268,23 @@ li {
 @media screen and (max-width:768px) {
     .data-form-ul .inputTit {
         width: 7.5em;
-        padding: 0 0.5em;
+        padding: 1em 0.5em;
+        padding-top: 1.6em;
     }
 
     .data-form-ul .inputBox {
         width: calc(100% - 7.5em);
+    }
+}
+@media screen and (max-width:650px) {
+    .data-form-ul .inputTit {
+        padding-top: 1.3em;
+    }
+    .data-form-ul .inputBox {
+        padding: 0.7em;
+    }
+    .data-form-ul textarea {
+        margin: 0;
     }
 }
 @media screen and (max-width:600px) {
@@ -347,7 +359,7 @@ li {
     background: #fff url(../imgs/calender.png) no-repeat right 12px center / 1.2em 1.2em;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
     .data-form-tbl colgroup,
     .data-form-tbl thead {
         display: none;
@@ -402,7 +414,7 @@ li {
 
     .data-form-tbl input,
     .data-form-tbl select {
-        margin: 0.611em 1em;
+        margin: 1em 1.5em;
     }
     .verYellow thead tr th,
     .verYellow tbody tr td {
@@ -442,6 +454,11 @@ li {
         margin-bottom: 1em;
     }
 
+    .data-form-tbl input,
+    .data-form-tbl select {
+        margin: 0.7em;
+    }
+
     /* Mobile 1단 */
     .tabDouble tbody tr {
         display: block;
@@ -469,6 +486,7 @@ li {
     }
 }
 
+
 .data-form-btns {
     position: absolute;
     top: 0.5em;
@@ -490,11 +508,9 @@ li {
     word-break: keep-all;
     position: relative;
 }
-
-.data-form-btn-add {
-    margin-right: 0.3em;
+.data-form-tbl tbody tr td:last-child {
+    position: relative;
 }
-
 [class*='data-form-btn-'] span::after {
     content: '';
     display: inline-block;
@@ -515,6 +531,41 @@ li {
 
 [class*='data-form-btn-']:hover {
     cursor: pointer;
+    background-color: #002261;
+}
+
+/* 관련 자료 등록 버튼 */
+#input-file {
+    display: none;
+}
+.verYellow input.upload-name {
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:1430px) {
+    .data-form-btn-file {
+        padding: 0.3em 2.2em 0.3em 1em;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .data-form-btn-file {
+        line-height: normal;
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translate(0, -50%);
+    }
+
+    .verYellow input.upload-name {
+        display: block;
+        text-align: left;
+    }
 }
 
 @media screen and (max-width:990px) {
@@ -525,25 +576,30 @@ li {
         position: relative;
         overflow: hidden;
     }
-    [class*='data-form-btn-'] {
+    .data-form-btn-add {
         padding: 1em 0.2em;
         padding-right: 1em;
-        width: 49.5%;
+        width: 100%;
         float: left;
         text-align: center;
     }
-    .data-form-btn-add {
-        margin-right: 1%;
+}
+
+@media screen and (max-width:650px) {
+    .data-form-tbl tbody tr td:last-child {
+        height: 8em;
+    }
+    .data-form-btn-file {
+        width: calc(100% - 8em);
+        top: calc(50% + 0.7em);
+        left: 7em;
+        transform: none;
+        padding: 0.5em 2.2em 0.5em 1em;
     }
 }
 
 @media screen and (max-width:500px) {
-    [class*='data-form-btn-'] {
-        width: 100%;
-        text-align: center;
-    }
     .data-form-btn-add {
-        margin-right: 0;
         margin-bottom: 1%;
     }
 }

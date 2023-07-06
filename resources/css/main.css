@@ -166,7 +166,7 @@ li {
 .apply-tbl [type="radio"]:checked {
     background-color: #2689ec;
     border: 1px solid #2689ec;
-    background: #2689ec url(../imgs/check.png) no-repeat center / 13px 11px;
+    background: #2689ec url(../imgs/check.png) no-repeat center / 70%;
 }
 
 .apply-tbl [type="radio"]:hover,
