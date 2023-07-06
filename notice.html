@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>06.공지사항</title>
     <link rel="stylesheet" href="./resources/css/notice.css">
+    <link rel="stylesheet" href="./resources/css/nice-select.css">
+    <script src="./resources/js/jquery-3.7.0.min.js" defer></script>
+    <script src="./resources/js/jquery.nice-select.js" defer></script>
+    <script src="./resources/js/notice.js" defer></script>
 </head>
 <body>
     <h2 class="ai-title">공지사항</h2>
@@ -132,17 +136,16 @@
             <a href="#" class="notice_page_arr_first" title="맨처음 페이지로 이동됩니다."></a>
             <a href="#" class="notice_page_arr_prev" title="이전 페이지로 이동됩니다."></a>
             <div class="notice_pageNums">
-                <strong class="notice_page_num" title="1 페이지로 이동됩니다.">1</strong>
-                <a href="#" class="notice_page_num" title="2 페이지로 이동됩니다.">2</a>
-                <a href="#" class="notice_page_num" title="3 페이지로 이동됩니다.">3</a>
-                <a href="#" class="notice_page_num" title="4 페이지로 이동됩니다.">4</a>
-                <a href="#" class="notice_page_num" title="5 페이지로 이동됩니다.">5</a>
-                <a href="#" class="notice_page_num" title="6 페이지로 이동됩니다.">6</a>
-                <a href="#" class="notice_page_num" title="7 페이지로 이동됩니다.">7</a>
-                <a href="#" class="notice_page_num" title="8 페이지로 이동됩니다.">8</a>
-                <a href="#" class="notice_page_num" title="9 페이지로 이동됩니다.">9</a>
-                <span>/</span>
-                <a href="#" class="notice_page_num" title="10 페이지로 이동됩니다.">10</a>
+                <a href="#" class="notice_page_num" title="1 페이지로 이동됩니다.">121</a>
+                <a href="#" class="notice_page_num active" title="2 페이지로 이동됩니다.">122</a>
+                <a href="#" class="notice_page_num" title="3 페이지로 이동됩니다.">123</a>
+                <a href="#" class="notice_page_num" title="4 페이지로 이동됩니다.">124</a>
+                <a href="#" class="notice_page_num" title="5 페이지로 이동됩니다.">125</a>
+                <a href="#" class="notice_page_num" title="6 페이지로 이동됩니다.">126</a>
+                <a href="#" class="notice_page_num" title="7 페이지로 이동됩니다.">127</a>
+                <a href="#" class="notice_page_num" title="8 페이지로 이동됩니다.">128</a>
+                <a href="#" class="notice_page_num" title="9 페이지로 이동됩니다.">129</a>
+                <a href="#" class="notice_page_num" title="10 페이지로 이동됩니다.">130</a>
             </div>
             <a href="#" class="notice_page_arr_next" title="다음 페이지로 이동됩니다."></a>
             <a href="#" class="notice_page_arr_last" title="맨마지막 페이지로 이동됩니다."></a>
@@ -336,7 +339,7 @@
             <a href="#" class="notice_page_arr_first" title="맨처음 페이지로 이동됩니다."></a>
             <a href="#" class="notice_page_arr_prev" title="이전 페이지로 이동됩니다."></a>
             <div class="notice_pageNums">
-                <strong class="notice_page_num" title="1 페이지로 이동됩니다.">1</strong>
+                <a href="#" class="notice_page_num active" title="1 페이지로 이동됩니다.">1</a>
                 <a href="#" class="notice_page_num" title="2 페이지로 이동됩니다.">2</a>
                 <a href="#" class="notice_page_num" title="3 페이지로 이동됩니다.">3</a>
                 <a href="#" class="notice_page_num" title="4 페이지로 이동됩니다.">4</a>
@@ -345,7 +348,146 @@
                 <a href="#" class="notice_page_num" title="7 페이지로 이동됩니다.">7</a>
                 <a href="#" class="notice_page_num" title="8 페이지로 이동됩니다.">8</a>
                 <a href="#" class="notice_page_num" title="9 페이지로 이동됩니다.">9</a>
-                <span>/</span>
+                <a href="#" class="notice_page_num" title="10 페이지로 이동됩니다.">10</a>
+            </div>
+            <a href="#" class="notice_page_arr_next" title="다음 페이지로 이동됩니다."></a>
+            <a href="#" class="notice_page_arr_last" title="맨마지막 페이지로 이동됩니다."></a>
+        </div>
+    </div>
+
+    <h2 class="ai-title">공지사항 (모바일 레이아웃 변경)</h2>
+    <div class="notice_list typeC">
+
+        <div class="notice_result">
+            <span class="notice_result_txt">총 120 건</span>
+            <div>
+                <select class="notice_result_select ml0">
+                    <option value="">10건씩 보기</option>
+                    <option value="">20건씩 보기</option>
+                    <option value="">30건씩 보기</option>
+                </select>
+                <select class="notice_result_select">
+                    <option value="">제목 + 내용</option>
+                    <option value="">제목</option>
+                    <option value="">내용</option>
+                </select>
+                <div class="notice_result_srcBox">
+                    <input type="text" class="notice_srch_input">
+                    <button type="submit" class="notice_srch_btn">검색</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notice_tableWrap">
+            <!-- PC -->
+            <table class="notice_table">
+                <caption class="blind">공지사항</caption>
+                <colgroup>
+                    <col class="col-num">
+                    <col class="col-title">
+                    <col class="col-writer">
+                    <col class="col-date">
+                    <col class="col-view">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성자</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-before="번호"><span>120</span></td>
+                        <td data-before="제목"><span><a href="#">지능형 감사정보시스템 서비스 안내입니다</span></a></td>
+                        <td data-before="작성자"><span>관리자</span></td>
+                        <td data-before="등록일"><span>2023-06-22</span></td>
+                        <td data-before="조회수"><span>258</span></td>
+                    </tr>
+                    <tr>
+                        <td data-before="번호"><span>119</span></td>
+                        <td data-before="제목"><span><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</span></a></td>
+                        <td data-before="작성자"><span>관리자</span></td>
+                        <td data-before="등록일"><span>2023-06-22</span></td>
+                        <td data-before="조회수"><span>258</span></td>
+                    </tr>
+                    <tr>
+                        <td data-before="번호"><span>118</span></td>
+                        <td data-before="제목"><span><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</span></a></td>
+                        <td data-before="작성자"><span>관리자</span></td>
+                        <td data-before="등록일"><span>2023-06-22</span></td>
+                        <td data-before="조회수"><span>258</span></td>
+                    </tr>
+                    <tr>
+                        <td data-before="번호"><span>117</span></td>
+                        <td data-before="제목"><span><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span></td>
+                        <td data-before="작성자"><span>관리자</span></td>
+                        <td data-before="등록일"><span>2023-06-22</span></td>
+                        <td data-before="조회수"><span>258</span></td>
+                    </tr>
+                    <tr>
+                        <td data-before="번호"><span>116</span></td>
+                        <td data-before="제목"><span><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span></td>
+                        <td data-before="작성자"><span>관리자</span></td>
+                        <td data-before="등록일"><span>2023-06-22</span></td>
+                        <td data-before="조회수"><span>258</span></td>
+                    </tr>
+                    <tr>
+                        <td data-before="번호"><span>115</span></td>
+                        <td data-before="제목"><span><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span></td>
+                        <td data-before="작성자"><span>관리자</span></td>
+                        <td data-before="등록일"><span>2023-06-22</span></td>
+                        <td data-before="조회수"><span>258</span></td>
+                    </tr>
+                    <tr>
+                        <td data-before="번호"><span>114</span></td>
+                        <td data-before="제목">
+                            <span><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></span>
+                        </td>
+                        <td data-before="작성자"><span>관리자</span></td>
+                        <td data-before="등록일"><span>2023-06-22</span></td>
+                        <td data-before="조회수"><span>258</span></td>
+                    </tr>
+                    <tr>
+                        <td data-before="번호"><span>113</span></td>
+                        <td data-before="제목"><span><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></span></td>
+                        <td data-before="작성자"><span>관리자</span></td>
+                        <td data-before="등록일"><span>2023-06-22</span></td>
+                        <td data-before="조회수"><span>258</span></td>
+                    </tr>
+                    <tr>
+                        <td data-before="번호"><span>112</span></td>
+                        <td data-before="제목"><span><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span></td>
+                        <td data-before="작성자"><span>관리자</span></td>
+                        <td data-before="등록일"><span>2023-06-22</span></td>
+                        <td data-before="조회수"><span>258</span></td>
+                    </tr>
+                    <tr>
+                        <td data-before="번호"><span>111</span></td>
+                        <td data-before="제목"><span><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span></td>
+                        <td data-before="작성자"><span>관리자</span></td>
+                        <td data-before="등록일"><span>2023-06-22</span></td>
+                        <td data-before="조회수"><span>258</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="notice_page">
+            <a href="#" class="notice_page_arr_first" title="맨처음 페이지로 이동됩니다."></a>
+            <a href="#" class="notice_page_arr_prev" title="이전 페이지로 이동됩니다."></a>
+            <div class="notice_pageNums">
+                <a href="#" class="notice_page_num active" title="1 페이지로 이동됩니다.">1</a>
+                <a href="#" class="notice_page_num" title="2 페이지로 이동됩니다.">2</a>
+                <a href="#" class="notice_page_num" title="3 페이지로 이동됩니다.">3</a>
+                <a href="#" class="notice_page_num" title="4 페이지로 이동됩니다.">4</a>
+                <a href="#" class="notice_page_num" title="5 페이지로 이동됩니다.">5</a>
+                <a href="#" class="notice_page_num" title="6 페이지로 이동됩니다.">6</a>
+                <a href="#" class="notice_page_num" title="7 페이지로 이동됩니다.">7</a>
+                <a href="#" class="notice_page_num" title="8 페이지로 이동됩니다.">8</a>
+                <a href="#" class="notice_page_num" title="9 페이지로 이동됩니다.">9</a>
                 <a href="#" class="notice_page_num" title="10 페이지로 이동됩니다.">10</a>
             </div>
             <a href="#" class="notice_page_arr_next" title="다음 페이지로 이동됩니다."></a>
