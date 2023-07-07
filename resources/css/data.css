@@ -39,6 +39,9 @@ body {
     color: #555555;
     font-size: 18px;
     background-color: #003c8b;
+    width: 90%;
+    max-width: 80em;
+    margin: 0 auto;
 }
 @media screen and (max-width:1280px) {
     body {
@@ -84,7 +87,7 @@ li {
     font-size: 1.667em;
     font-weight: 500;
     color: #fff;
-    margin: 1em;
+    margin: 1em 0;
 }
 
 .data-form {
@@ -97,14 +100,12 @@ li {
     font-size: 1.333em;
     font-weight: 500;
     color: #fff;
-    margin: 1em;
+    margin: 1em 0;
 }
 
 .data-form-ul {
-    width: 90%;
-    max-width: 80em;
+    width: 100%;
     overflow: hidden;
-    margin: 0 auto;
     border-radius: 0.5em;
 }
 
@@ -117,10 +118,6 @@ li {
 .data-form-ul li.w100 {
     width: 100%;
 }
-
-/* .data-form-ul [class*='input'] {
-    line-height: 4em;
-} */
 
 .data-form-ul .inputTit{
     width: 10em;
@@ -299,9 +296,7 @@ li {
 
 /* table */
 .data-form-tbl {
-    width: 90%;
-    max-width: 80em;
-    margin: 0 auto;
+    width: 100%;
     margin-bottom: 2em;
     border-spacing: 0;
     font-weight: 400;
@@ -359,6 +354,13 @@ li {
     background: #fff url(../imgs/calender.png) no-repeat right 12px center / 1.2em 1.2em;
 }
 
+[class*="data-form-add"] tbody tr td > span {
+    display: none;
+}
+
+@media screen and (max-width:1400px) {
+}
+
 @media screen and (max-width: 1400px) {
     .data-form-tbl colgroup,
     .data-form-tbl thead {
@@ -380,7 +382,7 @@ li {
         padding: 0;
         border-bottom: 1px solid #88b4ec;
     }
-    .data-form-tbl tbody tr td:before {
+    /* .data-form-tbl tbody tr td:before {
         display: inline-block;
         -webkit-box-flex: 0;
         -ms-flex: 0 0 6em;
@@ -388,6 +390,11 @@ li {
         content: attr(data-label);
         color: #54514f;
         background-color: #fffbe3;
+    } */
+
+    [class*="data-form-add"] tbody tr td > span {
+        display: block;
+        width: 10em;
     }
 
     /* border */
@@ -486,14 +493,12 @@ li {
     }
 }
 
-
 .data-form-btns {
     position: absolute;
     top: 0.5em;
     left: 50%;
     transform: translate(-50%,0);
-    width: 90%;
-    max-width: 80em;
+    width: 100%;
     text-align: right;
 }
 
@@ -549,17 +554,26 @@ li {
 
 @media screen and (max-width:1430px) {
     .data-form-btn-file {
-        padding: 0.3em 2.2em 0.3em 1em;
+        line-height: 2.667em;
+        padding: 0 2.2em 0 1em;
+        transition: 0.5s;
     }
 }
 
 @media screen and (max-width:1400px) {
+    .data-form-btn-add {
+        transition: 0.5s;
+    }
     .data-form-btn-file {
-        line-height: normal;
+        height: 2.667em;
         position: absolute;
         top: 50%;
-        right: 1em;
+        right: 1.5em;
         transform: translate(0, -50%);
+        transition: 0.5s;
+    }
+    .data-form-btn-file span {
+        vertical-align: middle;
     }
 
     .verYellow input.upload-name {
@@ -577,29 +591,39 @@ li {
         overflow: hidden;
     }
     .data-form-btn-add {
-        padding: 1em 0.2em;
+        padding: 0.8em 0;
         padding-right: 1em;
-        width: 100%;
+        width: 50%;
         float: left;
+        left: 50%;
+        transform: translate(-50%,0);
+        transition: 0.5s;
         text-align: center;
+        font-size: 1.2em;
     }
 }
 
 @media screen and (max-width:650px) {
     .data-form-tbl tbody tr td:last-child {
-        height: 8em;
+        height: calc(8em - 0.7em);
     }
     .data-form-btn-file {
-        width: calc(100% - 8em);
-        top: calc(50% + 0.7em);
-        left: 7em;
+        width: calc(100% - 8.6em);
+        top: 50%;
+        right: 0.7em;
         transform: none;
-        padding: 0.5em 2.2em 0.5em 1em;
+        transition: 0.5s;
     }
 }
 
 @media screen and (max-width:500px) {
     .data-form-btn-add {
         margin-bottom: 1%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .data-form-btn-add {
+        width: 100%;
     }
 }

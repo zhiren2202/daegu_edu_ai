@@ -39,6 +39,9 @@ body {
     color: #555555;
     font-size: 18px;
     background-color: #003c8b;
+    width: 90%;
+    max-width: 80em;
+    margin: 0 auto;
 }
 @media screen and (max-width:1280px) {
     body {
@@ -72,7 +75,7 @@ li {
     font-size: 1.667em;
     font-weight: 500;
     color: #fff;
-    margin: 1em;
+    margin: 1em 0;
 }
 
 .apply-tbl-list {
@@ -83,10 +86,8 @@ li {
 }
 
 .apply-tbl {
-    width: 90%;
-    max-width: 80em;
+    width: 100%;
     overflow: hidden;
-    margin: 0 auto;
     margin-bottom: 2em;
     border-collapse: separate;
     border-spacing: 0;
@@ -107,7 +108,7 @@ li {
     width: 15%;
     display: block;
     float: left;
-    padding:0 1em;
+    padding-left: 2em;
     background-color: #e1f1fd;
     font-weight: 500;
     color: #004b9a;
@@ -135,7 +136,8 @@ li {
 
 .apply-tbl_tbody .inputBox {
     width: auto;
-    margin: 0.2em 0.5em;
+    margin: 0.2em 0;
+    margin-right: 1em;
 }
 
 .apply-tbl_tbody label {
@@ -188,24 +190,22 @@ li {
     text-align: right;
 }
 
-.apply-tbl input[type="tel"].red {
+.apply-tbl input[type="tel"].font_red {
     color: #ef0000;
 }
 
-.apply-tbl input[type="tel"].blue {
+.apply-tbl input[type="tel"].font_blue {
     color: #0952f5;
 }
 
 .apply-btns {
-    width: 90%;
-    max-width: 80em;
-    margin: 0 auto;
+    width: 100%;
     text-align: right;
 }
 
 [class*='apply-btn-'] {
-    padding: 0.5em 2em;
-    padding-right: 3em;
+    padding: 0.5em 1.5em;
+    padding-right: 2.7em;
     background-color: #2689ec;
     border: 1px solid #002261;
     border-radius: 0.3em;
@@ -232,6 +232,9 @@ li {
 }
 
 @media screen and (max-width:1280px) {
+    .apply-tbl_thead {
+        padding:0 1em;
+    }
     .apply-tbl input[type="text"] {
         width: 100%;
     }

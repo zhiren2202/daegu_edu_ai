@@ -96,13 +96,14 @@
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background-color: #fff;
-  color: #003c8b;
+  /* color: #003c8b; */
+  color: #555;
 }
 
 .nice-select .option:hover,
 .nice-select .option.focus,
 .nice-select .option.selected.focus {
-  background-color: #003c8b;
+  background-color: #7f8d9e;
   color: #fff;
 }
 
