@@ -218,6 +218,12 @@ li {
 
 [class*='apply-btn-']:hover {
     cursor: pointer;
+    background-color: #fff;
+    color: #2689ec;
+}
+
+[class*='apply-btn-']:hover span::after {
+    background: #fff url(../imgs/btn_arr_blue.png) no-repeat center;
 }
 
 [class*='apply-btn-'] span::after {
