@@ -283,6 +283,16 @@ li {
     .data-form-ul .inputBox textarea {
         width: 100%;
     }
+    .data-form input,
+    .data-form select,
+    .data-form textarea {
+        height: 3.5em;
+    }
+    .data-form-ul .inputTit {
+        padding: 0;
+        padding-left: 0.5em;
+        line-height: 5em;
+    }
 }
 
 /* table */
@@ -386,6 +396,7 @@ li {
         display: block;
         width: 6em;
         font-weight: 500;
+        line-height: 4em;
     }
 
     /* border */
@@ -458,6 +469,12 @@ li {
     .data-form-tbl select {
         margin: 0.7em;
         width: calc(100% - 7.4em);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .data-form-tbl tbody tr td > span {
+        padding-top: 0.5em;
     }
 }
 
@@ -538,6 +555,7 @@ input.upload-name {
     input.upload-name {
         display: block;
         text-align: left;
+        height: 2.667em;
     }
 }
 
@@ -550,7 +568,7 @@ input.upload-name {
         overflow: hidden;
     }
     .data-form-btn-add {
-        padding: 0.8em 0;
+        padding: 1.2em 0;
         padding-right: 1em;
         width: 50%;
         float: left;
