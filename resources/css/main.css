@@ -261,7 +261,7 @@ li {
         float: left;
     }
     .apply-btn-reset {
-        margin-right: 1%;
+        margin-right: 2%;
     }
 }
 
@@ -272,10 +272,14 @@ li {
     }
     .apply-tbl_tbody {
         width: calc(100% - 6em);
-        padding: 0.5em;
+        padding: 1em;
     }
     .apply-tbl_tbody.radioFlex {
-        padding: 0.5em;
+        padding: 1em;
+    }
+    .apply-tbl_tbody .inputBox {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
     }
     .apply-tbl input[type="tel"] {
         width: calc(100% - 1.2em);
@@ -284,9 +288,11 @@ li {
     [class*='apply-btn-'] {
         width: 100%;
         clear: both;
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
     .apply-btn-reset {
-        margin-bottom: 1%;
+        margin-bottom: 2%;
     }
 }
 
