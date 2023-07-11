@@ -129,7 +129,7 @@ li {
 
 .data-form-ul .inputBox {
     width: calc(100% - 10em);
-    padding: 1em 1.5em;
+    padding: 1em;
 }
 
 .data-form input,
@@ -397,23 +397,23 @@ li {
     }
     .data-form-tbl tbody tr td:first-child,
     .data-form-tbl tbody tr:last-child td:first-child {
-        border-radius: 0.5em 0.5em 0 0;
+        border-radius: 0;
     }
     .data-form-tbl tbody tr td:last-child,
     .data-form-tbl tbody tr:last-child td:last-child {
-        border-radius: 0 0 0.5em 0.5em;
+        border-radius: 0;
     }
     .data-form-tbl tbody tr td:first-child:before {
-        border-radius: 0.5em 0 0 0;
+        border-radius: 0;
     }
     .data-form-tbl tbody tr td:last-child:before {
-        border-radius: 0 0 0 0.5em;
+        border-radius: 0;
     }
 
     .data-form-tbl input,
     .data-form-tbl select {
         margin: 1em;
-        width: calc(100% - 7.4em);
+        width: calc(100% - 8em);
     }
     .data-form-tbl thead tr th,
     .data-form-tbl tbody tr td {
@@ -457,6 +457,7 @@ li {
     .data-form-tbl input,
     .data-form-tbl select {
         margin: 0.7em;
+        width: calc(100% - 7.4em);
     }
 }
 
@@ -529,7 +530,7 @@ input.upload-name {
         padding: 0 2.2em 0 1em;
         position: absolute;
         top: 50%;
-        right: 1.5em;
+        right: 1em;
         transform: translate(0, -50%);
         transition: 0.5s;
     }

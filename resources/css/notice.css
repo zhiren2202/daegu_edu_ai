@@ -428,44 +428,46 @@ a {
     text-align: center;
 }
 
-[class*='notice_page_'] {
+[class*='board_page_'] {
     display: inline-block;
     vertical-align: middle;
     background-color: transparent;
     color: #fff;
-    /* font-size: 1.056em; */
+    font-size: 1.056em;
     margin: 0.5em;
 }
 
-[class*='notice_page_']:hover {
+[class*='board_page_']:hover {
     color: #74b2f3;
 }
 
-[class*='notice_page_arr'] {
+[class*='board_page_arr'] {
     border: 2px solid #74b2f3;
     margin: 0.1em;
     width: 2em;
     height: 2em;
     border-radius: 1em;
 }
-[class*='notice_page_arr']:hover {
+[class*='board_page_arr']:hover {
     background-color: #002d69;
 }
 
-.notice_page_arr_first {
+.board_page_arr_first {
     background: transparent url(../imgs/paging_first.png) no-repeat center / 40%;
 }
-.notice_page_arr_prev {
+.board_page_arr_prev {
     background: transparent url(../imgs/paging_prev.png) no-repeat center / 22%;
+    margin-right: 0.5em;
 }
-.notice_page_arr_next {
+.board_page_arr_next {
     background: transparent url(../imgs/paging_next.png) no-repeat center / 22%;
+    margin-left: 0.5em;
 }
-.notice_page_arr_last {
+.board_page_arr_last {
     background: transparent url(../imgs/paging_last.png) no-repeat center / 40%;
 }
 
-.notice_page_num.active {
+.board_page_num.active {
     color: #fff;
     min-width: 2em;
     height: 2em;
@@ -477,7 +479,7 @@ a {
 }
 
 @media screen and (max-width:850px) {
-    .notice_page_num.active {
+    .board_page_num.active {
         margin: 0;
     }
 }
@@ -489,27 +491,27 @@ a {
 }
 
 @media screen and (max-width:500px) {
-    [class*='notice_page_'] {
+    [class*='board_page_'] {
         font-size: 0.9em;
         margin: 0.3em;
     }
-    [class*='notice_page_arr'] {
+    [class*='board_page_arr'] {
         margin: 0.1em 0;
     }
 }
 
-/* typeC */
+/* board-change */
 @media screen and (max-width:750px) {
-    .typeC .board_table colgroup {
+    .board-change .board_table colgroup {
         display: none;
     }
-    .typeC .board_table thead {
+    .board-change .board_table thead {
         display: none;
     }
-    .typeC .board_table {
+    .board-change .board_table {
         display: table;
     }
-    .typeC tbody tr td {
+    .board-change tbody tr td {
         display: block;
         float: left;
         width: 100%;
@@ -517,7 +519,7 @@ a {
         padding-bottom: 0.5em;
         border-bottom: none;
     }
-    .typeC tbody tr td::before {
+    .board-change tbody tr td::before {
         content: attr(data-before);
         display: block;
         float: left;
@@ -525,26 +527,26 @@ a {
         text-align: right;
         font-weight: 600;
     }
-    .typeC tbody tr td span {
+    .board-change tbody tr td span {
         display: block;
         float: right;
         width: calc(100% - 7em);
         text-align: left;
     }
-    .typeC tbody tr td:first-child {
+    .board-change tbody tr td:first-child {
         padding-top: 1em;
     }
-    .typeC tbody tr td:last-child {
+    .board-change tbody tr td:last-child {
         padding-bottom: 1em;
         border-bottom: 1px solid #b0b7c0;
         border-right: 1px solid #b0b7c0;
     }
 }
 @media screen and (max-width:440px) {
-    .typeC tbody tr td::before {
+    .board-change tbody tr td::before {
         width: 4em;
     }
-    .typeC tbody tr td span {
+    .board-change tbody tr td span {
         width: calc(100% - 6em);
     }
 }
