@@ -132,6 +132,7 @@
   .nice-select .option {
     min-height: 3em;
     line-height: 3em;
+    padding-left: 2em;
   }
 }
 

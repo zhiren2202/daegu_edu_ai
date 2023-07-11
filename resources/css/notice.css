@@ -200,19 +200,22 @@ a {
     .board_total {
         width: 100%;
         margin-left: 0;
+        margin-bottom: 0.5em;
     }
     .board_selectBox {
         width: 100%;
     }
     .board_select {
         width: 49%;
-        height: 3em;
-        line-height: 3em;
+        height: 4em;
+        line-height: 4em;
         margin-left: 2%;
         margin-right: 0;
         margin-bottom: 2%;
+        padding: 0 2em;
         display: block;
         float: left;
+        background-position: right 1.5em center;
     }
     .board_select.ml0 {
         margin-left: 0;
@@ -221,16 +224,16 @@ a {
         width: 100%;
     }
     .board_srchList .board_srch_input {
-        width: calc(100% - 5em);
+        width: calc(100% - 7em);
         float: left;
     }
     .board_srchList .board_srch_btn {
-        width: 5em;
+        width: 7em;
         float: left;
     }
     .board_srchList .board_srch_input,
     .board_srchList .board_srch_btn {
-        height: 3em;
+        height: 4em;
     }
 }
 
@@ -341,6 +344,15 @@ a {
     }
     .board_table colgroup .col-view {
         width: 12%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .board_table thead tr th {
+        height: 3.5em;
+    }
+    .board_table tbody tr td {
+        height: 4.25em;
     }
 }
 
@@ -492,11 +504,17 @@ a {
 
 @media screen and (max-width:500px) {
     [class*='board_page_'] {
-        font-size: 0.9em;
-        margin: 0.3em;
+        /* font-size: 1em; */
+        margin: 0.5em 0.3em;
     }
     [class*='board_page_arr'] {
-        margin: 0.1em 0;
+        margin: 0.1em;
+    }
+    .board_page_arr_prev {
+        margin-right: 0.3em;
+    }
+    .board_page_arr_next {
+        margin-left: 0.3em;
     }
 }
 
@@ -516,7 +534,7 @@ a {
         float: left;
         width: 100%;
         height: auto;
-        padding-bottom: 0.5em;
+        padding-bottom: 1em;
         border-bottom: none;
     }
     .board-change tbody tr td::before {
@@ -534,10 +552,10 @@ a {
         text-align: left;
     }
     .board-change tbody tr td:first-child {
-        padding-top: 1em;
+        padding-top: 1.5em;
     }
     .board-change tbody tr td:last-child {
-        padding-bottom: 1em;
+        padding-bottom: 1.5em;
         border-bottom: 1px solid #b0b7c0;
         border-right: 1px solid #b0b7c0;
     }
