@@ -503,10 +503,6 @@ a {
 }
 
 @media screen and (max-width:500px) {
-    [class*='board_page_'] {
-        /* font-size: 1em; */
-        margin: 0.5em 0.3em;
-    }
     [class*='board_page_arr'] {
         margin: 0.1em;
     }
