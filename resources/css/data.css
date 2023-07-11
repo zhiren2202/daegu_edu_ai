@@ -350,7 +350,7 @@ li {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(../imgs/select_arrow_bl.png) no-repeat right 0.5em center / 11px 7px;
+    background: url(../imgs/select_arrow_bl.png) no-repeat right 1em center / 11px 7px;
 }
 
 .data-form-tbl select:hover,
@@ -469,11 +469,11 @@ li {
 
     .data-form-tbl input,
     .data-form-tbl select {
-        margin: 0.7em;
-        width: calc(100% - 7.4em);
+        margin: 1em;
+        width: calc(100% - 8em);
     }
     .data-form-tbl tbody tr td > span {
-        padding-top: 0.5em;
+        padding-top: 0.7em;
     }
 }
 
@@ -515,7 +515,7 @@ li {
 }
 
 .data-form-btn-file span::after {
-    background: transparent url(../imgs/btn_file.png) no-repeat center;
+    background: transparent url(../imgs/btn_file.png) no-repeat center / 50%;
 }
 
 [class*='data-form-btn-']:hover {
