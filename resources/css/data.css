@@ -151,6 +151,7 @@ li {
     height: auto;
     margin: 0.6em 0;
     resize: none;
+    line-height: 2em;
 }
 
 /* Table CSS - Blue */
@@ -372,7 +373,7 @@ li {
     background: #fff url(../imgs/calender.png) no-repeat right 12px center / 1.2em 1.2em;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1420px) {
     .data-form-tbl colgroup,
     .data-form-tbl thead {
         display: none;
@@ -434,7 +435,7 @@ li {
     }
 }
 
-@media (min-width: 650px) and (max-width: 1400px) {
+@media (min-width: 650px) and (max-width: 1420px) {
     .tabDouble tbody tr {
         display: flex;
         flex-wrap: wrap;
@@ -470,7 +471,7 @@ li {
     .data-form-tbl input,
     .data-form-tbl select {
         margin: 1em;
-        width: calc(100% - 8em);
+        width: calc(100% - 7em);
     }
     .data-form-tbl tbody tr td > span {
         padding-top: 0.7em;
@@ -534,9 +535,11 @@ input.upload-name {
     padding: 0;
     text-align: center;
     text-overflow: ellipsis;
+    /* font-size: 1.1em; */
+    padding: 0 0.5em;
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1420px) {
     .data-form-btn-add {
         transition: 0.5s;
     }
@@ -555,6 +558,7 @@ input.upload-name {
         display: block;
         text-align: left;
         height: 3.5em;
+        padding: 0;
     }
 }
 
@@ -577,7 +581,7 @@ input.upload-name {
     }
 }
 
-@media (min-width: 650px) and (max-width: 1400px) {
+@media (min-width: 650px) and (max-width: 1420px) {
     .data-form-tbl tbody tr td  {
         align-items: center;
     }
@@ -591,12 +595,16 @@ input.upload-name {
 
 @media screen and (max-width:650px) {
     .data-form-tbl tbody tr td:last-child {
-        height: 9em;
+        height: 6.5em;
+    }
+    input.upload-name {
+        margin: 0 1em;
+        /* margin-top: 0.5em; */
     }
     .data-form-btn-file {
-        width: calc(100% - 7.6em);
-        top: 50%;
-        right: 0.7em;
+        width: calc(100% - 7.7em);
+        top: 45%;
+        right: 1em;
         transform: none;
         transition: 0.5s;
     }

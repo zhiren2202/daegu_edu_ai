@@ -207,12 +207,13 @@ a {
     }
     .board_select {
         width: 49%;
-        height: 4em;
-        line-height: 4em;
+        height: 3.5em;
+        line-height: 3.5em;
+        font-size: 1em;
         margin-left: 2%;
         margin-right: 0;
         margin-bottom: 2%;
-        padding: 0 2em;
+        padding: 0 1.5em;
         display: block;
         float: left;
         background-position: right 1.5em center;
@@ -233,11 +234,12 @@ a {
     }
     .board_srchList .board_srch_input,
     .board_srchList .board_srch_btn {
-        height: 4em;
+        height: 3.5em;
+        font-size: 1em;
     }
 }
 
-@media screen and (max-width:250px) {
+@media screen and (max-width:400px) {
     .board_select {
         width: 100%;
         margin-left: 0;
@@ -353,12 +355,6 @@ a {
     }
     .board_table tbody tr td {
         height: 4.25em;
-    }
-}
-
-@media screen and (max-width:610px) {
-    .board_table tbody tr td {
-        padding: 0 0.5em;
     }
 }
 

@@ -88,7 +88,7 @@ li {
 .apply-tbl {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     border-collapse: separate;
     border-spacing: 0;
     border: 1px solid #003a8a;
@@ -292,7 +292,7 @@ li {
         padding-bottom: 1em;
     }
     .apply-btn-reset {
-        margin-bottom: 2%;
+        margin-bottom: 0.5em;
     }
 }
 
