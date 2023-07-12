@@ -68,31 +68,31 @@
             <li>
                 <div class="inputTit">직급</div>
                 <div class="inputBox">
-                    <input type="text" name="" id="" value="교사 행정 7급" readonly>
+                    <input type="text" name="" id="" value="교사 행정 7급">
                 </div>
             </li>
             <li>
                 <div class="inputTit">생년월일</div>
                 <div class="inputBox">
-                    <input type="text" name="" id="" value="1996-11-12" readonly>
+                    <input type="text" id="birthDate" class="birthDate" name="birthDate" value="1996-11-12">
                 </div>
             </li>
             <li>
                 <div class="inputTit">범죄명</div>
                 <div class="inputBox">
-                    <input type="text" name="" id="" value="폭행 및 상해" readonly>
+                    <input type="text" name="" id="" value="폭행 및 상해">
                 </div>
             </li>
             <li>
                 <div class="inputTit">비위유형</div>
                 <div class="inputBox">
-                    <input type="text" name="" id="" value="품위 유지의 의무 위반" readonly>
+                    <input type="text" name="" id="" value="품위 유지의 의무 위반">
                 </div>
             </li>
             <li class="w100">
                 <div class="inputTit">범죄내용</div>
                 <div class="inputBox">
-                    <textarea name="" id="target-textarea" rows="3" readonly>만취 상태에서 길에서 행인에 대한 시비, 폭행으로 전치 4주에 해당하는 상해를 범하였음.</textarea>
+                    <textarea name="" id="target-textarea" rows="3">만취 상태에서 길에서 행인에 대한 시비, 폭행으로 전치 4주에 해당하는 상해를 범하였음.</textarea>
                 </div>
             </li>
         </ul>
@@ -127,11 +127,11 @@
                     </td>
                     <td>
                         <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287" readonly>
+                        <input type="text" name="" id="" value="2023-0210-B14287">
                     </td>
                     <td>
                         <span>기관명</span>
-                        <input type="text" name="" id="" value="대구서부경찰서" readonly>
+                        <input type="text" name="" id="" value="대구서부경찰서">
                     </td>
                     <td>
                         <span>상태</span>
@@ -143,13 +143,16 @@
                     </td>
                     <td>
                         <span>내용</span>
-                        <input type="text" name="" id="" value="수사개시" readonly>
+                        <input type="text" name="" id="" value="수사개시">
                     </td>
-                    <td>
+                    <td class="fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -159,11 +162,11 @@
                     </td>
                     <td>
                         <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287" readonly>
+                        <input type="text" name="" id="" value="2023-0210-B14287">
                     </td>
                     <td>
                         <span>기관명</span>
-                        <input type="text" name="" id="" value="대구서부경찰서" readonly>
+                        <input type="text" name="" id="" value="대구서부경찰서">
                     </td>
                     <td>
                         <span>상태</span>
@@ -175,13 +178,16 @@
                     </td>
                     <td>
                         <span>내용</span>
-                        <input type="text" name="" id="" value="검찰송치" readonly>
+                        <input type="text" name="" id="" value="검찰송치">
                     </td>
-                    <td>
+                    <td class="fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -191,11 +197,11 @@
                     </td>
                     <td>
                         <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287" readonly>
+                        <input type="text" name="" id="" value="2023-0210-B14287">
                     </td>
                     <td>
                         <span>기관명</span>
-                        <input type="text" name="" id="" value="대구검찰청 서부지청" readonly>
+                        <input type="text" name="" id="" value="대구검찰청 서부지청">
                     </td>
                     <td>
                         <span>상태</span>
@@ -207,22 +213,25 @@
                     </td>
                     <td>
                         <span>내용</span>
-                        <input type="text" name="" id="" value="약식기소(구약식)" readonly>
+                        <input type="text" name="" id="" value="약식기소(구약식)">
                     </td>
-                    <td>
+                    <td class="fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
             </tbody>
         </table>
         
         <div class="data-form-btns">
-            <a class="data-form-btn-add" href="javascript:;">
+            <button type="button" class="data-form-btn-add">
                 <span>추가입력</span>
-            </a>
+            </button>
         </div>
 
     </form>
@@ -256,11 +265,11 @@
                     </td>
                     <td>
                         <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287" readonly>
+                        <input type="text" name="" id="" value="2023-0210-B14287">
                     </td>
                     <td>
                         <span>기관명</span>
-                        <input type="text" name="" id="" value="대구서부경찰서" readonly>
+                        <input type="text" name="" id="" value="대구서부경찰서">
                     </td>
                     <td>
                         <span>상태</span>
@@ -272,13 +281,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="수사개시" readonly>
+                        <input type="text" name="" id="" value="수사개시">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -288,11 +300,11 @@
                     </td>
                     <td>
                         <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287" readonly>
+                        <input type="text" name="" id="" value="2023-0210-B14287">
                     </td>
                     <td>
                         <span>기관명</span>
-                        <input type="text" name="" id="" value="대구서부경찰서" readonly>
+                        <input type="text" name="" id="" value="대구서부경찰서">
                     </td>
                     <td>
                         <span>상태</span>
@@ -304,13 +316,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="검찰송치" readonly>
+                        <input type="text" name="" id="" value="검찰송치">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -320,11 +335,11 @@
                     </td>
                     <td>
                         <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287" readonly>
+                        <input type="text" name="" id="" value="2023-0210-B14287">
                     </td>
                     <td>
                         <span>기관명</span>
-                        <input type="text" name="" id="" value="대구검찰청 서부지청" readonly>
+                        <input type="text" name="" id="" value="대구검찰청 서부지청">
                     </td>
                     <td>
                         <span>상태</span>
@@ -336,13 +351,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="약식기소(구약식)" readonly>
+                        <input type="text" name="" id="" value="약식기소(구약식)">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
             </tbody>
@@ -391,13 +409,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="내부종결" readonly>
+                        <input type="text" name="" id="" value="내부종결">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -417,13 +438,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="중징계 요청" readonly>
+                        <input type="text" name="" id="" value="중징계 요청">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -443,13 +467,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="중징계 처리" readonly>
+                        <input type="text" name="" id="" value="중징계 처리">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -469,13 +496,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="감봉" readonly>
+                        <input type="text" name="" id="" value="감봉">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -495,13 +525,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="감봉 1월" readonly>
+                        <input type="text" name="" id="" value="감봉 1월">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
             </tbody>
@@ -549,13 +582,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="내부종결" readonly>
+                        <input type="text" name="" id="" value="내부종결">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -575,13 +611,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="중징계 요청" readonly>
+                        <input type="text" name="" id="" value="중징계 요청">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -601,13 +640,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="중징계 처리" readonly>
+                        <input type="text" name="" id="" value="중징계 처리">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -627,13 +669,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="감봉" readonly>
+                        <input type="text" name="" id="" value="감봉">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
                 <tr class="data-form-addCon">
@@ -653,13 +698,16 @@
                     </td>
                     <td class="w100">
                         <span>내용</span>
-                        <input type="text" name="" id="" value="감봉 1월" readonly>
+                        <input type="text" name="" id="" value="감봉 1월">
                     </td>
-                    <td class="w100">
+                    <td class="w100 fileAddCell">
                         <span>관련자료</span>
                         <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
                         <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
                         <input type="file" id="input-file">
+                        <button type="button" class="data-form-btn-remove">
+                            <span>삭제</span>
+                        </button>
                     </td>
                 </tr>
             </tbody>
@@ -678,31 +726,31 @@
             <li>
                 <div class="inputTit">처분결과</div>
                 <div class="inputBox">
-                        <input type="text" name="" id="" value="정직 1월" readonly>
+                        <input type="text" name="" id="" value="정직 1월">
                 </div>
             </li>
             <li>
                 <div class="inputTit">처분결과통보</div>
                 <div class="inputBox">
-                        <input type="text" name="" id="" value="2023년03월18일 감사처리" readonly>
+                        <input type="text" name="" id="" value="2023년03월18일 감사처리">
                 </div>
             </li>
             <li>
                 <div class="inputTit">담당부서</div>
                 <div class="inputBox">
-                        <input type="text" name="" id="" value="감사부" readonly>
+                        <input type="text" name="" id="" value="감사부">
                 </div>
             </li>
             <li>
                 <div class="inputTit">담당자</div>
                 <div class="inputBox">
-                        <input type="text" name="" id="" value="황우성" readonly>
+                        <input type="text" name="" id="" value="황우성">
                 </div>
             </li>
             <li class="w100">
                 <div class="inputTit">비고</div>
                 <div class="inputBox">
-                    <textarea name="" id="target-textarea" rows="3" readonly>내부 종결</textarea>
+                    <textarea name="" id="target-textarea" rows="3">내부 종결</textarea>
                 </div>
             </li>
         </ul>
