@@ -320,6 +320,13 @@ li {
     display: none;
 }
 
+.data-form-tbl tbody tr td.fileAddCell {
+    position: relative;
+    line-height: 2em;
+    text-align: left;
+    padding: 0 0.5em;
+}
+
 /* border-radius */
 .data-form-tbl thead tr th:first-child {
     border-radius: 0.5em 0 0 0;
@@ -369,7 +376,8 @@ li {
     background-color: #0b438a;
 }
 
-.applyDate {
+.applyDate,
+.birthDate {
     background: #fff url(../imgs/calender.png) no-repeat right 12px center / 1.2em 1.2em;
 }
 
@@ -478,6 +486,7 @@ li {
     }
 }
 
+/* 버튼 */
 .data-form-btns {
     position: absolute;
     top: 0.5em;
@@ -488,7 +497,7 @@ li {
 }
 
 [class*='data-form-btn-'] {
-    padding: 0.3em 3em 0.3em 1.5em;
+    padding: 0.3em 2.5em 0.3em 1.5em;
     background-color: #2689ec;
     border: 1px solid #002261;
     border-radius: 0.3em;
@@ -497,31 +506,41 @@ li {
     font-weight: 500;
     word-break: keep-all;
     position: relative;
+    /* transition: 0.5s; */
 }
-.data-form-tbl tbody tr td:last-child {
-    position: relative;
+.data-form-btn-file {
+    padding: 0.3em 1.5em 0.3em 0.3em;
 }
-[class*='data-form-btn-'] span::after {
-    content: '';
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    position: absolute;
-    top: 50%;
-    transform: translate(0,-50%);
-}
-
-.data-form-btn-add span::after {
-    background: transparent url(../imgs/btn_add.png) no-repeat center / 60%;
-}
-
-.data-form-btn-file span::after {
-    background: transparent url(../imgs/btn_file.png) no-repeat center / 50%;
+.data-form-btn-remove {
+    padding: 0.3em 0.4em;
+    padding-right: 1.4em;
 }
 
 [class*='data-form-btn-']:hover {
     cursor: pointer;
     background-color: #002261;
+}
+[class*='data-form-btn-'] span::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    margin-left: 0.2em;
+}
+
+.data-form-btn-add span::after {
+    background: transparent url(../imgs/btn_add.png) no-repeat center / 90%;
+}
+
+.data-form-btn-file span::after {
+    background: transparent url(../imgs/btn_file.png) no-repeat center / 90%;
+}
+
+.data-form-btn-remove span::after {
+    background: transparent url(../imgs/btn_add.png) no-repeat center / 90%;
 }
 
 /* 관련 자료 등록 버튼 */
@@ -535,11 +554,38 @@ input.upload-name {
     padding: 0;
     text-align: center;
     text-overflow: ellipsis;
-    /* font-size: 1.1em; */
     padding: 0 0.5em;
+    height: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+@media screen and (min-width:1420px) {
+    .data-form-tbl tbody tr td.fileAddCell {
+        padding: 0.5em;
+    }
+    .data-form-btn-file {
+        padding: 0 0.5em;
+        display: block;
+        float: left;
+        line-height: 2em;
+        width: 8em;
+        margin-right: 0.5em;
+    }
+    .data-form-btn-remove {
+        padding: 0;
+        padding-right: 1.2em;
+        display: block;
+        float: left;
+        line-height: 2em;
+        width: calc(100% - 8.5em);
+    }
 }
 
 @media screen and (max-width:1420px) {
+    .data-form-tbl tbody tr td.fileAddCell {
+        padding: 0;
+        text-align: center;
+    }
     .data-form-btn-add {
         transition: 0.5s;
     }
@@ -549,8 +595,15 @@ input.upload-name {
         padding: 0 2.2em 0 1em;
         position: absolute;
         top: 50%;
-        right: 1em;
+        right: 6.5em;
         transform: translate(0, -50%);
+        transition: 0.5s;
+    }
+    .data-form-btn-remove {
+        position: absolute;
+        right: 1em;
+        padding: 0 2.2em 0 1em;
+        height: 2.667em;
         transition: 0.5s;
     }
 
@@ -599,12 +652,20 @@ input.upload-name {
     }
     input.upload-name {
         margin: 0 1em;
-        /* margin-top: 0.5em; */
     }
     .data-form-btn-file {
-        width: calc(100% - 7.7em);
+        width: calc(100% - 13.7em);
+        top: 45%;
+        right: 7em;
+        transform: none;
+        transition: 0.5s;
+    }
+    .data-form-btn-remove {
+        width: 5.5em;
+        position: absolute;
         top: 45%;
         right: 1em;
+        height: 2.667em;
         transform: none;
         transition: 0.5s;
     }
@@ -613,5 +674,23 @@ input.upload-name {
 @media screen and (max-width:500px) {
     .data-form-btn-add {
         margin-bottom: 1%;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .data-form-btn-file,
+    .data-form-btn-remove {
+        padding: 0;
+    }
+    .data-form-btn-file span::after,
+    .data-form-btn-remove span::after {
+        display: none;
+    }
+    .data-form-btn-file {
+        width: calc(100% - 12.2em);
+        right: 5.5em;
+    }
+    .data-form-btn-remove {
+        width: 4em;
     }
 }
