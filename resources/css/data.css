@@ -63,6 +63,10 @@ body {
         font-size: 13px;
     }
 }
+.data_page {
+    width: 100%;
+    overflow: hidden;
+}
 .blind {
     border: 0;
     clip: rect(0 0 0 0);
@@ -83,43 +87,45 @@ li {
     list-style: none;
 }
 
-.ai-title {
+.title {
     font-size: 1.5em;
     font-weight: 500;
     color: #fff;
     margin: 1em 0;
 }
 
-.data-form {
+[class*="form-"] {
     width: 100%;
     margin-bottom: 5em;
     position: relative;
 }
 
-.data-form-title {
+.stt2 {
     font-size: 1.333em;
     font-weight: 500;
     color: #fff;
-    margin: 1em 0;
+    margin: 0.5em 0;
+    padding-right: 6em;
 }
 
-.data-form-ul {
+/* form_ul */
+.form_ul {
     width: 100%;
     overflow: hidden;
     border-radius: 0.5em;
 }
 
-.data-form-ul li {
+.form_ul [class*="cell"] {
     width: 50%;
     float: left;
     display: flex;
 }
 
-.data-form-ul li.w100 {
+.form_ul li.cell-full {
     width: 100%;
 }
 
-.data-form-ul .inputTit{
+.form_ul .tbl_th{
     width: 10em;
     font-weight: 500;
     text-align: left;
@@ -127,171 +133,80 @@ li {
     padding-top: 1.6em;
 }
 
-.data-form-ul .inputBox {
+.form_ul .tbl_td {
     width: calc(100% - 10em);
     padding: 1em;
 }
 
-.data-form input,
-.data-form select,
-.data-form textarea {
+[class*="form_"] input,
+[class*="form_"] select,
+[class*="form_"] textarea {
     height: 2.667em;
     font-weight: 500;
     border-radius: 0.3em;
     vertical-align: middle;
 }
 
-.data-form-ul [type="text"],
-.data-form-ul textarea {
+.form_ul [type="text"],
+.form_ul textarea {
     width: calc(100% - 2em);
     padding: 1em;
 }
 
-.data-form-ul textarea {
+.form_ul textarea {
     height: auto;
-    margin: 0.6em 0;
     resize: none;
     line-height: 2em;
 }
 
-/* Table CSS - Blue */
-.verBlue ul li [class*='input'],
-.verBlue thead tr th,
-.verBlue tbody tr td {
-    border-bottom: 1px solid #89bbe2;
-}
-.verBlue ul li:last-child [class*='input'],
-.verBlue tbody tr:last-child td {
-    border-bottom: 0;
-}
-.verBlue thead tr th,
-.verBlue tbody tr td {
-    border-right: 1px solid #88b4ec;
-}
-.verBlue thead tr th:last-child,
-.verBlue tbody tr td:last-child {
-    border-right: 0;
-}
-.verBlue ul li .inputTit,
-.verBlue thead tr th {
-    background-color: #a0d2f9;
-    color: #00224e;
-}
-.verBlue ul li .inputTit::before {
-    content: '•';
-    color: #fff;
-}
-.verBlue ul li .inputBox,
-.verBlue tbody tr td {
-    background-color: #2f68ae;
-}
-.verBlue ul li .inputBox [type="text"],
-.verBlue ul li .inputBox textarea,
-.verBlue input,
-.verBlue select {
-    color: #82b9ff;
-    background-color: #0b438a;
-    border: 1px solid #82b9ff;
-}
-.verBlue tbody tr td > span {
-    background-color: #a0d2f9;
-    color: #00224e;
-}
-
-/* Table CSS - Yellow */
-.verYellow ul li [class*='input'],
-.verYellow thead tr th,
-.verYellow tbody tr td {
-    border-bottom: 1px solid #88b4ec;
-}
-.verYellow ul li:last-child [class*='input'],
-.verYellow tbody tr:last-child td {
-    border-bottom: 0;
-}
-.verYellow thead tr th,
-.verYellow tbody tr td {
-    border-right: 1px solid #88b4ec;
-}
-.verYellow thead tr th:last-child,
-.verYellow tbody tr td:last-child {
-    border-right: 0;
-}
-.verYellow ul li .inputTit,
-.verYellow thead tr th {
-    background-color: #fffbe3;
-    color: #54514f;
-}
-.verYellow ul li .inputTit::before {
-    content: '•';
-    color: #ffa37a;
-}
-.verYellow ul li .inputBox,
-.verYellow tbody tr td {
-    background-color: #fff;
-}
-.verYellow ul li .inputBox [type="text"],
-.verYellow ul li .inputBox textarea,
-.verYellow input,
-.verYellow select {
-    color: #555555;
-    background-color: #f5fafe;
-    border: 1px solid #2c89cc;
-}
-.verYellow tbody tr td > span {
-    background-color: #fffbe3;
-}
-
 @media screen and (max-width:1000px) {
-    .data-form-ul .inputTit {
+    .form_ul .tbl_th {
         width: 9em;
     }
-    .data-form-ul .inputBox {
+    .form_ul .tbl_td {
         width: calc(100% - 9em);
     }
-    .data-form-ul .inputBox [type="text"],
-    .data-form-ul .inputBox textarea {
+    .form_ul .tbl_td [type="text"],
+    .form_ul .tbl_td textarea {
         width: 100%;
     }
 
 }
 @media screen and (max-width:768px) {
-    .data-form-ul .inputTit {
+    .form_ul .tbl_th {
         width: 7.5em;
         padding: 1em 0.5em;
         padding-top: 1.6em;
     }
 
-    .data-form-ul .inputBox {
+    .form_ul .tbl_td {
         width: calc(100% - 7.5em);
     }
 }
 @media screen and (max-width:650px) {
-    .data-form-ul .inputTit {
+    .form_ul .tbl_th {
         padding-top: 1.3em;
     }
-    .data-form-ul .inputBox {
+    .form_ul .tbl_td {
         padding: 1em;
-    }
-    .data-form-ul textarea {
-        margin: 0;
     }
 }
 @media screen and (max-width:650px) {
-    .data-form-ul li {
+    .form_ul [class*="cell"] {
         width: 100%;
     }
-    .data-form-ul .inputBox [type="text"],
-    .data-form-ul .inputBox textarea {
+    .form_ul .tbl_td [type="text"],
+    .form_ul .tbl_td textarea {
         width: 100%;
     }
-    .data-form input,
-    .data-form select {
+    [class*="form_"] input,
+    [class*="form_"] select {
         height: 3.5em;
     }
-    .data-form textarea {
+    [class*="form_"] textarea {
         height: 10em;
     }
-    .data-form-ul .inputTit {
+    .form_ul .tbl_th {
         padding: 0;
         padding-left: 0.5em;
         line-height: 5em;
@@ -299,7 +214,7 @@ li {
 }
 
 /* table */
-.data-form-tbl {
+.form_tbl {
     width: 100%;
     margin-bottom: 2em;
     border-spacing: 0;
@@ -307,73 +222,153 @@ li {
     color: #54514f;
     text-align: center;
 }
-.data-form-tbl thead tr th {
+.form_tbl thead tr th {
     line-height: 2.778em;
 }
 
-.data-form-tbl tbody tr td {
-    line-height: 4em;
-    padding:0 1em;
+.form_tbl tbody tr td {
+    padding: 1em;
 }
 
-.data-form-tbl tbody tr td > span {
+.form_tbl tbody tr td .tbl_th {
     display: none;
 }
+.form_tbl tbody tr td .tbl_td {
+    background-color: #fff;
+}
 
-.data-form-tbl tbody tr td.fileAddCell {
+.form_tbl tbody tr [class*="cell_file"] {
     position: relative;
-    line-height: 2em;
-    text-align: left;
+    text-align: center;
     padding: 0 0.5em;
 }
 
 /* border-radius */
-.data-form-tbl thead tr th:first-child {
+.form_tbl thead tr th:first-child {
     border-radius: 0.5em 0 0 0;
 }
-.data-form-tbl thead tr th:last-child {
+.form_tbl thead tr th:last-child {
     border-radius: 0 0.5em 0 0;
 }
-.data-form-tbl tbody tr:last-child td:first-child{
+.form_tbl tbody tr:last-child td:first-child{
     border-radius: 0 0 0 0.5em;
 }
-.data-form-tbl tbody tr:last-child td:last-child{
+.form_tbl tbody tr:last-child td:last-child{
     border-radius: 0 0 0.5em 0;
 }
 
-.data-form-tbl input,
-.data-form-tbl select {
+.form_tbl input,
+.form_tbl select {
     width: 100%;
     padding: 0 1em;
 }
 
-.data-form-tbl [type="file"] {
+.form_tbl [type="file"] {
     background: none;
     border: 0;
     line-height: 2.778em;
     padding: 0;
 }
 
-.data-form-tbl select {
+.form_tbl select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background: url(../imgs/select_arrow_bl.png) no-repeat right 1em center / 11px 7px;
 }
 
-.data-form-tbl select:hover,
-.data-form-tbl select option:hover {
+.form_tbl select:hover,
+.form_tbl select option:hover {
     cursor: pointer;
 }
 
-.verYellow .data-form-tbl select,
-.verYellow .data-form-tbl select option {
+/* Table CSS - Blue */
+.form-blue ul li [class*='tbl_'],
+.form-blue thead tr th,
+.form-blue tbody tr td {
+    border-bottom: 1px solid #89bbe2;
+}
+.form-blue thead tr th,
+.form-blue tbody tr td {
+    border-right: 1px solid #88b4ec;
+}
+.form-blue ul li .tbl_th,
+.form-blue thead tr th {
+    background-color: #a0d2f9;
+    color: #00224e;
+}
+.form-blue ul li .tbl_th::before {
+    content: '•';
+    color: #fff;
+}
+.form-blue ul li .tbl_td,
+.form-blue tbody tr td {
+    background-color: #2f68ae;
+}
+.form-blue textarea,
+.form-blue input,
+.form-blue select {
+    color: #82b9ff;
+    background-color: #0b438a;
+    border: 1px solid #82b9ff;
+}
+.form-blue tbody tr td > span {
+    background-color: #a0d2f9;
+    color: #00224e;
+}
+
+.form-blue .form_tbl select,
+.form-blue .form_tbl select option {
+    background-color: #0b438a;
+}
+
+/* Table CSS - Yellow */
+.form-yellow ul li [class*='tbl_'],
+.form-yellow thead tr th,
+.form-yellow tbody tr td {
+    border-bottom: 1px solid #88b4ec;
+}
+.form-yellow thead tr th,
+.form-yellow tbody tr td {
+    border-right: 1px solid #88b4ec;
+}
+.form-yellow ul li .tbl_th,
+.form-yellow thead tr th {
+    background-color: #fffbe3;
+    color: #54514f;
+}
+.form-yellow ul li .tbl_th::before {
+    content: '•';
+    color: #ffa37a;
+}
+.form-yellow ul li .tbl_td,
+.form-yellow tbody tr td {
+    background-color: #fff;
+}
+.form-yellow textarea,
+.form-yellow input,
+.form-yellow select {
+    color: #555555;
+    background-color: #f5fafe;
+    border: 1px solid #2c89cc;
+}
+.form-yellow tbody tr td > span {
+    background-color: #fffbe3;
+}
+
+.form-yellow .form_tbl select,
+.form-yellow .form_tbl select option {
     background-color: #f5fafe;
 }
 
-.verBlue .data-form-tbl select,
-.verBlue .data-form-tbl select option {
-    background-color: #0b438a;
+/* Table CSS - 공통 */
+[class*='form-'] ul li:last-child [class*='tbl_'],
+[class*='form-'] tbody tr:last-child td {
+    border-bottom: 0;
+}
+[class*='form-'] thead tr th:last-child,
+[class*='form-'] tbody tr td:last-child {
+    border-right: 0;
 }
 
 .applyDate,
@@ -382,122 +377,136 @@ li {
 }
 
 @media screen and (max-width: 1420px) {
-    .data-form-tbl colgroup,
-    .data-form-tbl thead {
+    .form_tbl colgroup,
+    .form_tbl thead {
         display: none;
     }
-    .data-form-tbl tbody {
+    .form_tbl tbody {
         width: 100%;
     }
-    .data-form-tbl tbody tr {
+    .form_tbl tbody tr {
         display: block;
         margin-bottom: 2em;
     }
-    .data-form-tbl tbody tr:last-child {
+    .form_tbl tbody tr:last-child {
         margin-bottom: 1em;
     }
-    .data-form-tbl tbody tr td {
+    .form_tbl tbody tr td {
         width: 100%;
         display: flex;
         padding: 0;
         border-bottom: 1px solid #88b4ec;
     }
 
-    .data-form-tbl tbody tr td > span {
+    .form_tbl tbody tr td .tbl_th {
         display: block;
         width: 6em;
         font-weight: 500;
         line-height: 4em;
     }
+    .form_tbl tbody tr td .tbl_td {
+        display: block;
+        width: calc(100% - 6em);
+        background-color: #fff;
+    }
 
     /* border */
-    .data-form-tbl tbody tr td:last-child {
+    .form_tbl tbody tr td:last-child {
         border-bottom: 0;
     }
-    .data-form-tbl tbody tr:last-child td {
+    .form_tbl tbody tr:last-child td {
         border-bottom: 1px solid #88b4ec;
     }
-    .data-form-tbl tbody tr td:first-child,
-    .data-form-tbl tbody tr:last-child td:first-child {
+    .form_tbl tbody tr td:first-child,
+    .form_tbl tbody tr:last-child td:first-child {
         border-radius: 0;
     }
-    .data-form-tbl tbody tr td:last-child,
-    .data-form-tbl tbody tr:last-child td:last-child {
+    .form_tbl tbody tr td:last-child,
+    .form_tbl tbody tr:last-child td:last-child {
         border-radius: 0;
     }
-    .data-form-tbl tbody tr td:first-child:before {
+    .form_tbl tbody tr td:first-child:before {
         border-radius: 0;
     }
-    .data-form-tbl tbody tr td:last-child:before {
+    .form_tbl tbody tr td:last-child:before {
         border-radius: 0;
     }
 
-    .data-form-tbl input,
-    .data-form-tbl select {
+    .form_tbl input,
+    .form_tbl select {
         margin: 1em;
-        width: calc(100% - 8em);
+        width: calc(100% - 2em);
     }
-    .data-form-tbl thead tr th,
-    .data-form-tbl tbody tr td {
+    .form_tbl thead tr th,
+    .form_tbl tbody tr td {
         border-right: 0;
     }
 }
 
 @media (min-width: 650px) and (max-width: 1420px) {
-    .tabDouble tbody tr {
+    .form-double tbody tr {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
     }
-    .tabDouble tbody tr td {
+    .form-double tbody tr td.cell {
         width: 50%;
     }
-    .tabDouble tbody tr td.w100 {
+    .form-double tbody tr td.cell-full {
         width: 100%;
     }
-    .tabDouble tbody tr td:first-child,
-    .tabDouble tbody tr:last-child td:first-child {
+    .form-double tbody tr td:first-child,
+    .form-double tbody tr:last-child td:first-child {
         border-radius: 0;
     }
-    .tabDouble tbody tr td:last-child,
-    .tabDouble tbody tr:last-child td:last-child {
+    .form-double tbody tr td:last-child,
+    .form-double tbody tr:last-child td:last-child {
         border-radius: 0;
     }
-    .tabDouble tbody tr td:first-child:before {
+    .form-double tbody tr td:first-child:before {
         border-radius: 0;
     }
-    .tabDouble tbody tr td:last-child:before {
+    .form-double tbody tr td:last-child:before {
         border-radius: 0;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .data-form-tbl tbody tr {
+    .form_tbl tbody tr {
         margin-bottom: 1em;
     }
-
-    .data-form-tbl input,
-    .data-form-tbl select {
-        margin: 1em;
-        width: calc(100% - 7em);
+    .form_tbl input,
+    .form_tbl select {
+        margin: 0;
     }
-    .data-form-tbl tbody tr td > span {
-        padding-top: 0.7em;
+    .form_tbl tbody tr td .tbl_th {
+        line-height: normal;
+        padding: 1em 0;
+    }
+    .form_tbl tbody tr td .tbl_td {
+        padding: 1em;
     }
 }
 
 /* 버튼 */
-.data-form-btns {
+.title_btns {
     position: absolute;
-    top: 0.5em;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;
+    text-align: right;
+}
+.user_btns {
+    position: absolute;
+    bottom: -2.5em;
     left: 50%;
     transform: translate(-50%,0);
     width: 100%;
     text-align: right;
 }
 
-[class*='data-form-btn-'] {
-    padding: 0.3em 2.5em 0.3em 1.5em;
+[class*='btn-'] {
     background-color: #2689ec;
     border: 1px solid #002261;
     border-radius: 0.3em;
@@ -506,21 +515,24 @@ li {
     font-weight: 500;
     word-break: keep-all;
     position: relative;
-    /* transition: 0.5s; */
 }
-.data-form-btn-file {
+.btn-add {
+    padding: 0.3em 2.5em 0.3em 1.5em;
+}
+.btn-file {
     padding: 0.3em 1.5em 0.3em 0.3em;
+    text-align: left;
 }
-.data-form-btn-remove {
+.btn-remove {
     padding: 0.3em 0.4em;
     padding-right: 1.4em;
 }
 
-[class*='data-form-btn-']:hover {
+[class*='btn-']:hover {
     cursor: pointer;
     background-color: #002261;
 }
-[class*='data-form-btn-'] span::after {
+[class*='btn-']::after {
     content: '';
     display: inline-block;
     width: 1em;
@@ -531,20 +543,20 @@ li {
     margin-left: 0.2em;
 }
 
-.data-form-btn-add span::after {
+.btn-add::after {
     background: transparent url(../imgs/btn_add.png) no-repeat center / 90%;
 }
 
-.data-form-btn-file span::after {
+.btn-file span::after {
     background: transparent url(../imgs/btn_file.png) no-repeat center / 90%;
 }
 
-.data-form-btn-remove span::after {
+.btn-remove span::after {
     background: transparent url(../imgs/btn_add.png) no-repeat center / 90%;
 }
 
 /* 관련 자료 등록 버튼 */
-#input-file {
+[id*="input-file"] {
     display: none;
 }
 input.upload-name {
@@ -556,14 +568,13 @@ input.upload-name {
     text-overflow: ellipsis;
     padding: 0 0.5em;
     height: 1.5em;
-    margin-bottom: 0.5em;
 }
 
-@media screen and (min-width:1420px) {
-    .data-form-tbl tbody tr td.fileAddCell {
+@media screen and (min-width:1421px) {
+    .form_tbl tbody tr [class*="cell_file"] {
         padding: 0.5em;
     }
-    .data-form-btn-file {
+    .btn-file {
         padding: 0 0.5em;
         display: block;
         float: left;
@@ -571,7 +582,7 @@ input.upload-name {
         width: 8em;
         margin-right: 0.5em;
     }
-    .data-form-btn-remove {
+    .btn-remove {
         padding: 0;
         padding-right: 1.2em;
         display: block;
@@ -582,16 +593,22 @@ input.upload-name {
 }
 
 @media screen and (max-width:1420px) {
-    .data-form-tbl tbody tr td.fileAddCell {
+    .form_tbl tbody tr [class*="cell_file"] {
         padding: 0;
         text-align: center;
     }
-    .data-form-btn-add {
+    .form_tbl tbody tr .cell_file2 .tbl_td,
+    .form_tbl tbody tr .cell_file3 .tbl_td {
+        text-align: left;
+        margin-left: 1em;
+    }
+    .btn-add {
         transition: 0.5s;
     }
-    .data-form-btn-file {
+    .btn-file {
         height: 2.667em;
         line-height: 2.667em;
+        text-align: center;
         padding: 0 2.2em 0 1em;
         position: absolute;
         top: 50%;
@@ -599,14 +616,15 @@ input.upload-name {
         transform: translate(0, -50%);
         transition: 0.5s;
     }
-    .data-form-btn-remove {
+    .btn-remove {
         position: absolute;
         right: 1em;
+        top: 50%;
+        transform: translate(0,-50%);
         padding: 0 2.2em 0 1em;
         height: 2.667em;
         transition: 0.5s;
     }
-
     input.upload-name {
         display: block;
         text-align: left;
@@ -616,14 +634,22 @@ input.upload-name {
 }
 
 @media screen and (max-width:990px) {
-    .data-form-tbl {
+    .form_tbl {
         margin-bottom: 0;
     }
-    .data-form-btns {
+    .user_btns {
         position: relative;
         overflow: hidden;
+        bottom: 0;
     }
-    .data-form-btn-add {
+    .title_btns .btn-add {
+        padding: 0.3em 1.8em 0.3em 0.8em;
+        float: right;
+        transition: 0.5s;
+        text-align: center;
+        font-size: 1em;
+    }
+    .user_btns .btn-add {
         padding: 1.2em 0;
         padding-right: 1em;
         width: 100%;
@@ -635,32 +661,39 @@ input.upload-name {
 }
 
 @media (min-width: 650px) and (max-width: 1420px) {
-    .data-form-tbl tbody tr td  {
+    .form_tbl tbody tr td  {
         align-items: center;
     }
-    .data-form-tbl input, .data-form-tbl select {
-        margin: 0.5em 1em;
+    .form_tbl input, .form_tbl select {
+        margin: 0.5em 0;
     }
-    .data-form-tbl tbody tr td > span {
+    .form_tbl tbody tr td .tbl_th {
         line-height: 5em;
     }
 }
 
 @media screen and (max-width:650px) {
-    .data-form-tbl tbody tr td:last-child {
+    .form_tbl tbody tr [class*="cell_file"] {
         height: 6.5em;
+    }
+    .form_tbl tbody tr .cell_file1 {
+        height: auto;
+    }
+    .form_tbl tbody tr .cell_file3 .tbl_td {
+        padding: 0;
+        text-align: center;
     }
     input.upload-name {
         margin: 0 1em;
     }
-    .data-form-btn-file {
+    .btn-file {
         width: calc(100% - 13.7em);
         top: 45%;
         right: 7em;
         transform: none;
         transition: 0.5s;
     }
-    .data-form-btn-remove {
+    .btn-remove {
         width: 5.5em;
         position: absolute;
         top: 45%;
@@ -672,25 +705,26 @@ input.upload-name {
 }
 
 @media screen and (max-width:500px) {
-    .data-form-btn-add {
+    .btn-add {
         margin-bottom: 1%;
     }
 }
 
 @media screen and (max-width:380px) {
-    .data-form-btn-file,
-    .data-form-btn-remove {
+    .btn-file,
+    .btn-remove {
         padding: 0;
+        text-align: center;
     }
-    .data-form-btn-file span::after,
-    .data-form-btn-remove span::after {
+    .btn-file span::after,
+    .btn-remove span::after {
         display: none;
     }
-    .data-form-btn-file {
+    .btn-file {
         width: calc(100% - 12.2em);
         right: 5.5em;
     }
-    .data-form-btn-remove {
+    .btn-remove {
         width: 4em;
     }
 }
