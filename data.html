@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,749 +12,905 @@
     <script src="./resources/js/jquery-ui.js" defer></script>
     <script src="./resources/js/data.js" defer></script>
 </head>
+
 <body>
-    <h2 class="ai-title">공무원범죄대장</h2>
+    <div class="data_page">
+        <h2 class="title">공무원범죄대장</h2>
 
-    <form action="#" class="data-form verBlue">
-        <h3 class="data-form-title">1. 연계 데이터</h3>
-        <ul class="data-form-ul">
-            <li>
-                <div class="inputTit">조회년도</div>
-                <div class="inputBox">
-                    <input type="text" name="" id="" value="2023년도" readonly>
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">성명</div>
-                <div class="inputBox">
-                    <input type="text" name="" id="" value="김영호" readonly>
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">관활기관</div>
-                <div class="inputBox">
-                    <input type="text" name="" id="" value="대구서부교육지원청" readonly>
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">소속</div>
-                <div class="inputBox">
-                    <input type="text" name="" id="" value="대구서도초등학교" readonly>
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">처분일자</div>
-                <div class="inputBox">
-                    <input type="text" name="" id="" value="2023-03-20" readonly>
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">처분종류</div>
-                <div class="inputBox">
-                    <input type="text" name="" id="" value="징계" readonly>
-                </div>
-            </li>
-            <li class="w100">
-                <div class="inputTit">처분내용</div>
-                <div class="inputBox">
-                    <input type="text" name="" id="" value="정직 처리" readonly>
-                </div>
-            </li>
-        </ul>
-    </form>
+        <form action="#" class="form-blue">
+            <h3 class="stt2">1. 연계 데이터</h3>
+            <ul class="form_ul">
+                <li class="cell">
+                    <div class="cell_th">조회년도</div>
+                    <div class="cell_td">
+                        <input type="text" name="" id="" value="2023년도" title="조회년도" readonly />
+                        <!-- readonly : 입력불가, 데이터전송 가능 -->
+                        <!-- disabled : 입력불가, 데이터전송 불가 -->
+                        <!-- 입력재개시 readonly disabled 속성 삭제하기 -->
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">성명</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="김영호" readonly />
+                        <label for=""></label>
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">관활기관</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="대구서부교육지원청" readonly />
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">소속</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="대구서도초등학교" readonly />
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">처분일자</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="2023-03-20" readonly />
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">처분종류</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="징계" readonly />
+                    </div>
+                </li>
+                <li class="cell-full">
+                    <div class="tbl_th">처분내용</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="정직 처리" title="처분내용" readonly />
+                    </div>
+                </li>
+            </ul>
+        </form>
 
-    <form action="#" class="data-form verYellow">
-        <h3 class="data-form-title">2. 추가정보 및 범죄정보 입력</h3>
-        <ul class="data-form-ul">
-            <li>
-                <div class="inputTit">직급</div>
-                <div class="inputBox">
-                    <input type="text" name="" id="" value="교사 행정 7급">
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">생년월일</div>
-                <div class="inputBox">
-                    <input type="text" id="birthDate" class="birthDate" name="birthDate" value="1996-11-12">
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">범죄명</div>
-                <div class="inputBox">
-                    <input type="text" name="" id="" value="폭행 및 상해">
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">비위유형</div>
-                <div class="inputBox">
-                    <input type="text" name="" id="" value="품위 유지의 의무 위반">
-                </div>
-            </li>
-            <li class="w100">
-                <div class="inputTit">범죄내용</div>
-                <div class="inputBox">
-                    <textarea name="" id="target-textarea" rows="3">만취 상태에서 길에서 행인에 대한 시비, 폭행으로 전치 4주에 해당하는 상해를 범하였음.</textarea>
-                </div>
-            </li>
-        </ul>
-    </form>
+        <form action="#" class="form-yellow">
+            <h3 class="stt2">2. 추가정보 및 범죄정보 입력</h3>
+            <ul class="form_ul">
+                <li class="cell">
+                    <div class="tbl_th">직급</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="교사 행정 7급" />
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">생년월일</div>
+                    <div class="tbl_td">
+                        <input type="text" id="birthDate" class="birthDate" name="birthDate" value="1996-11-12" />
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">범죄명</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="폭행 및 상해" />
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">비위유형</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="품위 유지의 의무 위반" />
+                    </div>
+                </li>
+                <li class="cell-full">
+                    <div class="tbl_th">범죄내용</div>
+                    <div class="tbl_td">
+                        <textarea name="" class="target-textarea"
+                            rows="3">만취 상태에서 길에서 행인에 대한 시비, 폭행으로 전치 4주에 해당하는 상해를 범하였음.</textarea>
+                    </div>
+                </li>
+            </ul>
+        </form>
 
-    <form action="#" class="data-form verYellow">
-        <h3 class="data-form-title">3-1. 수사기관 정보 입력</h3>
-        <table class="data-form-tbl">
-            <colgroup>
-                <col style="width:16%">
-                <col style="width:18%">
-                <col style="width:18%">
-                <col style="width:13%">
-                <col style="width:17%">
-                <col style="width:18%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th scope="col">접수일자</th>
-                    <th scope="col">사건번호</th>
-                    <th scope="col">기관명</th>
-                    <th scope="col">상태</th>
-                    <th scope="col">내용</th>
-                    <th scope="col">관련자료</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate0" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287">
-                    </td>
-                    <td>
-                        <span>기관명</span>
-                        <input type="text" name="" id="" value="대구서부경찰서">
-                    </td>
-                    <td>
-                        <span>상태</span>
-                        <select name="" id="">
-                            <option value="" selected>수사개시</option>
-                            <option value="">상황통보</option>
-                            <option value="">처분결과</option>
-                        </select>
-                    </td>
-                    <td>
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="수사개시">
-                    </td>
-                    <td class="fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate1" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287">
-                    </td>
-                    <td>
-                        <span>기관명</span>
-                        <input type="text" name="" id="" value="대구서부경찰서">
-                    </td>
-                    <td>
-                        <span>상태</span>
-                        <select name="" id="">
-                            <option value="">수사개시</option>
-                            <option value="" selected>상황통보</option>
-                            <option value="">처분결과</option>
-                        </select>
-                    </td>
-                    <td>
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="검찰송치">
-                    </td>
-                    <td class="fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287">
-                    </td>
-                    <td>
-                        <span>기관명</span>
-                        <input type="text" name="" id="" value="대구검찰청 서부지청">
-                    </td>
-                    <td>
-                        <span>상태</span>
-                        <select name="" id="">
-                            <option value="">수사개시</option>
-                            <option value="">상황통보</option>
-                            <option value="" selected>처분결과</option>
-                        </select>
-                    </td>
-                    <td>
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="약식기소(구약식)">
-                    </td>
-                    <td class="fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <div class="data-form-btns">
-            <button type="button" class="data-form-btn-add">
-                <span>추가입력</span>
-            </button>
-        </div>
-
-    </form>
-
-    <form action="#" class="data-form verYellow tabDouble">
-        <h3 class="data-form-title">3-2. 수사기관 정보 입력 (태블릿 2단, 모바일 1단)</h3>
-        <table class="data-form-tbl">
-            <colgroup>
-                <col style="width:16%">
-                <col style="width:18%">
-                <col style="width:18%">
-                <col style="width:13%">
-                <col style="width:17%">
-                <col style="width:18%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th scope="col">접수일자</th>
-                    <th scope="col">사건번호</th>
-                    <th scope="col">기관명</th>
-                    <th scope="col">상태</th>
-                    <th scope="col">내용</th>
-                    <th scope="col">관련자료</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate3" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287">
-                    </td>
-                    <td>
-                        <span>기관명</span>
-                        <input type="text" name="" id="" value="대구서부경찰서">
-                    </td>
-                    <td>
-                        <span>상태</span>
-                        <select name="" id="">
-                            <option value="" selected>수사개시</option>
-                            <option value="">상황통보</option>
-                            <option value="">처분결과</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="수사개시">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate4" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287">
-                    </td>
-                    <td>
-                        <span>기관명</span>
-                        <input type="text" name="" id="" value="대구서부경찰서">
-                    </td>
-                    <td>
-                        <span>상태</span>
-                        <select name="" id="">
-                            <option value="">수사개시</option>
-                            <option value="" selected>상황통보</option>
-                            <option value="">처분결과</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="검찰송치">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate5" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>사건번호</span>
-                        <input type="text" name="" id="" value="2023-0210-B14287">
-                    </td>
-                    <td>
-                        <span>기관명</span>
-                        <input type="text" name="" id="" value="대구검찰청 서부지청">
-                    </td>
-                    <td>
-                        <span>상태</span>
-                        <select name="" id="">
+        <form action="#" class="form-yellow">
+            <h3 class="stt2">3-1. 수사기관 정보 입력</h3>
+            <div class="title_btns">
+                <button type="button" class="btn-add">
+                    <span>추가입력</span>
+                </button>
+            </div>
+            <table class="form_tbl">
+                <caption class="blind">수사기관 정보 입력</caption>
+                <colgroup>
+                    <col style="width:16%">
+                    <col style="width:18%">
+                    <col style="width:18%">
+                    <col style="width:13%">
+                    <col style="width:17%">
+                    <col style="width:18%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">접수일자</th>
+                        <th scope="col">사건번호</th>
+                        <th scope="col">기관명</th>
+                        <th scope="col">상태</th>
+                        <th scope="col">내용</th>
+                        <th scope="col">관련자료</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">23-07-12</span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">사건번호</span>
+                            <span class="tbl_td">2023-0210-B14287</span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">기관명</span>
+                            <span class="tbl_td">대구서부경찰서대구서부경찰서대구서부경찰서대구서부경찰서대구서부경찰서</span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">상태</span>
+                            <span class="tbl_td">수사개시</span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">수사개시</span>
+                        </td>
+                        <td class="cell-full cell_file1">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">파일명.jpg</span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate1" title="접수일자" name="applyDate" class="applyDate" value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">사건번호</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="2023-0210-B14287" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">기관명</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="대구서부경찰서" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">상태</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="">수사개시</option>
+                                    <option value="" selected>상황통보</option>
+                                    <option value="">처분결과</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="검찰송치" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file2">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                파일명파일명파일명파일명파일명파일명.jpg
+                                <input class="upload-name blind" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">사건번호</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="2023-0210-B14287" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">기관명</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="대구검찰청 서부지청" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">상태</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                            </span>
                             <option value="">수사개시</option>
                             <option value="">상황통보</option>
                             <option value="" selected>처분결과</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="약식기소(구약식)">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <div class="data-form-btns">
-            <a class="data-form-btn-add" href="javascript:;">
-                <span>추가입력</span>
-            </a>
-        </div>
+                            </select>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="약식기소(구약식)" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
 
-    </form>
+        <form action="#" class="form-yellow only_tablet_double">
+            <h3 class="stt2">3-2. 수사기관 정보 입력 (태블릿 2단, 모바일 1단)</h3>
+            <div class="title_btns">
+                <button type="button" class="btn-add">
+                    추가입력-title
+                </button>
+            </div>
+            <table class="form_tbl">
+                <caption class="blind">수사기관 정보 입력 (태블릿 2단, 모바일 1단)</caption>
+                <colgroup>
+                    <col style="width:16%">
+                    <col style="width:18%">
+                    <col style="width:18%">
+                    <col style="width:13%">
+                    <col style="width:17%">
+                    <col style="width:18%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">접수일자</th>
+                        <th scope="col">사건번호</th>
+                        <th scope="col">기관명</th>
+                        <th scope="col">상태</th>
+                        <th scope="col">내용</th>
+                        <th scope="col">관련자료</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <div class="tbl_th">접수일자</div>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate3" title="접수일자" name="applyDate" class="applyDate" value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">사건번호</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="2023-0210-B14287" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">기관명</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="대구서부경찰서" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">상태</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="" selected>수사개시</option>
+                                    <option value="">상황통보</option>
+                                    <option value="">처분결과</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="수사개시" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate4" title="접수일자" name="applyDate" class="applyDate" value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">사건번호</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="2023-0210-B14287" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">기관명</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="대구서부경찰서" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">상태</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="">수사개시</option>
+                                    <option value="" selected>상황통보</option>
+                                    <option value="">처분결과</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="검찰송치" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate5" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">사건번호</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="2023-0210-B14287" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">기관명</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="대구검찰청 서부지청" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">상태</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                            </span>
+                            <option value="">수사개시</option>
+                            <option value="">상황통보</option>
+                            <option value="" selected>처분결과</option>
+                            </select>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="약식기소(구약식)" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="user_btns">
+                <button type="button" class="btn-add">
+                    <span>추가입력-user</span>
+                </button>
+            </div>
+        </form>
 
-    <form action="#" class="data-form verYellow">
-        <h3 class="data-form-title">4-1. 관활기관 처리 정보 입력</h3>
-        <table class="data-form-tbl">
-            <colgroup>
-                <col style="width:16%">
-                <col style="width:18%">
-                <col style="width:48%">
-                <col style="width:18%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th scope="col">접수일자</th>
-                    <th scope="col">구분</th>
-                    <th scope="col">내용</th>
-                    <th scope="col">관련자료</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2_0" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>구분</span>
-                        <select name="" id="">
-                            <option value="" selected>내부종결</option>
-                            <option value="">징계요구신청</option>
-                            <option value="">징계요구</option>
-                            <option value="">징계의결</option>
-                            <option value="">징계처분</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="내부종결">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2_1" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>구분</span>
-                        <select name="" id="">
-                            <option value="">내부종결</option>
-                            <option value="" selected>징계요구신청</option>
-                            <option value="">징계요구</option>
-                            <option value="">징계의결</option>
-                            <option value="">징계처분</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="중징계 요청">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2_2" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>구분</span>
-                        <select name="" id="">
-                            <option value="">내부종결</option>
-                            <option value="">징계요구신청</option>
-                            <option value="" selected>징계요구</option>
-                            <option value="">징계의결</option>
-                            <option value="">징계처분</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="중징계 처리">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2_3" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>구분</span>
-                        <select name="" id="">
-                            <option value="">내부종결</option>
-                            <option value="">징계요구신청</option>
-                            <option value="">징계요구</option>
-                            <option value="" selected>징계의결</option>
-                            <option value="">징계처분</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="감봉">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2_4" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td class="w100">
-                        <span>구분</span>
-                        <select name="" id="">
-                            <option value="">내부종결</option>
-                            <option value="">징계요구신청</option>
-                            <option value="">징계요구</option>
-                            <option value="">징계의결</option>
-                            <option value="" selected>징계처분</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="감봉 1월">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    
-        <div class="data-form-btns">
-            <a class="data-form-btn-add" href="javascript:;">
-                <span>추가입력</span>
-            </a>
-        </div>
-    </form>
+        <form action="#" class="form-yellow">
+            <h3 class="stt2">4-1. 관활기관 처리 정보 입력</h3>
+            <div class="title_btns">
+                <button type="button" class="btn-add">
+                    <span>추가입력</span>
+                </button>
+            </div>
+            <table class="form_tbl">
+                <caption class="blind">관활기관 처리 정보 입력</caption>
+                <colgroup>
+                    <col style="width:16%">
+                    <col style="width:18%">
+                    <col style="width:48%">
+                    <col style="width:18%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">접수일자</th>
+                        <th scope="col">구분</th>
+                        <th scope="col">내용</th>
+                        <th scope="col">관련자료</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2_0" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">구분</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="" selected>내부종결</option>
+                                    <option value="">징계요구신청</option>
+                                    <option value="">징계요구</option>
+                                    <option value="">징계의결</option>
+                                    <option value="">징계처분</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="내부종결" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2_1" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">구분</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="">내부종결</option>
+                                    <option value="" selected>징계요구신청</option>
+                                    <option value="">징계요구</option>
+                                    <option value="">징계의결</option>
+                                    <option value="">징계처분</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="중징계 요청" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2_2" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">구분</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="">내부종결</option>
+                                    <option value="">징계요구신청</option>
+                                    <option value="" selected>징계요구</option>
+                                    <option value="">징계의결</option>
+                                    <option value="">징계처분</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="중징계 처리" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2_3" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">구분</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="">내부종결</option>
+                                    <option value="">징계요구신청</option>
+                                    <option value="">징계요구</option>
+                                    <option value="" selected>징계의결</option>
+                                    <option value="">징계처분</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="감봉" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2_4" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">구분</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="">내부종결</option>
+                                    <option value="">징계요구신청</option>
+                                    <option value="">징계요구</option>
+                                    <option value="">징계의결</option>
+                                    <option value="" selected>징계처분</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="감봉 1월" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
 
-    <form action="#" class="data-form verYellow tabDouble">
-        <h3 class="data-form-title">4-2. 관활기관 처리 정보 입력 (태블릿 2단, 모바일 1단)</h3>
-        <table class="data-form-tbl">
-            <colgroup>
-                <col style="width:16%">
-                <col style="width:18%">
-                <col style="width:48%">
-                <col style="width:18%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th scope="col">접수일자</th>
-                    <th scope="col">구분</th>
-                    <th scope="col">내용</th>
-                    <th scope="col">관련자료</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2_5" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>구분</span>
-                        <select name="" id="">
-                            <option value="" selected>내부종결</option>
-                            <option value="">징계요구신청</option>
-                            <option value="">징계요구</option>
-                            <option value="">징계의결</option>
-                            <option value="">징계처분</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="내부종결">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2_6" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>구분</span>
-                        <select name="" id="">
-                            <option value="">내부종결</option>
-                            <option value="" selected>징계요구신청</option>
-                            <option value="">징계요구</option>
-                            <option value="">징계의결</option>
-                            <option value="">징계처분</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="중징계 요청">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2_7" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>구분</span>
-                        <select name="" id="">
-                            <option value="">내부종결</option>
-                            <option value="">징계요구신청</option>
-                            <option value="" selected>징계요구</option>
-                            <option value="">징계의결</option>
-                            <option value="">징계처분</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="중징계 처리">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2_8" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>구분</span>
-                        <select name="" id="">
-                            <option value="">내부종결</option>
-                            <option value="">징계요구신청</option>
-                            <option value="">징계요구</option>
-                            <option value="" selected>징계의결</option>
-                            <option value="">징계처분</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="감봉">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="data-form-addCon">
-                    <td>
-                        <span>접수일자</span>
-                        <input type="text" id="applyDate2_9" title="접수일자" name="applyDate" class="applyDate" value="">
-                    </td>
-                    <td>
-                        <span>구분</span>
-                        <select name="" id="">
-                            <option value="">내부종결</option>
-                            <option value="">징계요구신청</option>
-                            <option value="">징계요구</option>
-                            <option value="">징계의결</option>
-                            <option value="" selected>징계처분</option>
-                        </select>
-                    </td>
-                    <td class="w100">
-                        <span>내용</span>
-                        <input type="text" name="" id="" value="감봉 1월">
-                    </td>
-                    <td class="w100 fileAddCell">
-                        <span>관련자료</span>
-                        <input class="upload-name" value="관련 자료를 등록해주세요." disabled>
-                        <label for="input-file" class="data-form-btn-file"><span>관련 자료 등록</span></label>
-                        <input type="file" id="input-file">
-                        <button type="button" class="data-form-btn-remove">
-                            <span>삭제</span>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    
-        <div class="data-form-btns">
-            <a class="data-form-btn-add" href="javascript:;">
-                <span>추가입력</span>
-            </a>
-        </div>
-    </form>
+        <form action="#" class="form-yellow form-double">
+            <h3 class="stt2">4-2. 관활기관 처리 정보 입력 (태블릿 2단, 모바일 1단)</h3>
+            <div class="title_btns">
+                <button type="button" class="btn-add">
+                    <span>추가입력</span>
+                </button>
+            </div>
+            <table class="form_tbl">
+                <caption class="blind">관활기관 처리 정보 입력 (태블릿 2단, 모바일 1단)</caption>
+                <colgroup>
+                    <col style="width:16%">
+                    <col style="width:18%">
+                    <col style="width:48%">
+                    <col style="width:18%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">접수일자</th>
+                        <th scope="col">구분</th>
+                        <th scope="col">내용</th>
+                        <th scope="col">관련자료</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2_5" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">구분</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="" selected>내부종결</option>
+                                    <option value="">징계요구신청</option>
+                                    <option value="">징계요구</option>
+                                    <option value="">징계의결</option>
+                                    <option value="">징계처분</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="내부종결" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2_6" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">구분</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="">내부종결</option>
+                                    <option value="" selected>징계요구신청</option>
+                                    <option value="">징계요구</option>
+                                    <option value="">징계의결</option>
+                                    <option value="">징계처분</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="중징계 요청" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2_7" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">구분</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="">내부종결</option>
+                                    <option value="">징계요구신청</option>
+                                    <option value="" selected>징계요구</option>
+                                    <option value="">징계의결</option>
+                                    <option value="">징계처분</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="중징계 처리" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2_8" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">구분</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="">내부종결</option>
+                                    <option value="">징계요구신청</option>
+                                    <option value="">징계요구</option>
+                                    <option value="" selected>징계의결</option>
+                                    <option value="">징계처분</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="감봉" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="form_tbl_row">
+                        <td class="cell">
+                            <span class="tbl_th">접수일자</span>
+                            <span class="tbl_td">
+                                <input type="text" id="applyDate2_9" title="접수일자" name="applyDate" class="applyDate"
+                                    value="" />
+                            </span>
+                        </td>
+                        <td class="cell">
+                            <span class="tbl_th">구분</span>
+                            <span class="tbl_td">
+                                <select name="" id="">
+                                    <option value="">내부종결</option>
+                                    <option value="">징계요구신청</option>
+                                    <option value="">징계요구</option>
+                                    <option value="">징계의결</option>
+                                    <option value="" selected>징계처분</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td class="cell-full">
+                            <span class="tbl_th">내용</span>
+                            <span class="tbl_td">
+                                <input type="text" name="" id="" value="감봉 1월" />
+                            </span>
+                        </td>
+                        <td class="cell-full cell_file3">
+                            <span class="tbl_th">관련자료</span>
+                            <span class="tbl_td">
+                                <input class="upload-name" value="관련 자료를 등록해주세요." disabled />
+                                <label for="input-file" class="btn-file"><span>관련 자료 등록</span></label>
+                                <input type="file" id="input-file" />
+                                <button type="button" class="btn-remove">
+                                    <span>삭제</span>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
 
-    <form action="#" class="data-form verYellow">
-        <h3 class="data-form-title">5. 처분결과 입력</h3>
-        <ul class="data-form-ul">
-            <li>
-                <div class="inputTit">처분결과</div>
-                <div class="inputBox">
-                        <input type="text" name="" id="" value="정직 1월">
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">처분결과통보</div>
-                <div class="inputBox">
-                        <input type="text" name="" id="" value="2023년03월18일 감사처리">
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">담당부서</div>
-                <div class="inputBox">
-                        <input type="text" name="" id="" value="감사부">
-                </div>
-            </li>
-            <li>
-                <div class="inputTit">담당자</div>
-                <div class="inputBox">
-                        <input type="text" name="" id="" value="황우성">
-                </div>
-            </li>
-            <li class="w100">
-                <div class="inputTit">비고</div>
-                <div class="inputBox">
-                    <textarea name="" id="target-textarea" rows="3">내부 종결</textarea>
-                </div>
-            </li>
-        </ul>
-    </form>
+        <form action="#" class="form-yellow">
+            <h3 class="stt2">5. 처분결과 입력</h3>
+            <ul class="form_ul">
+                <li class="cell">
+                    <div class="tbl_th">처분결과</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="정직 1월" />
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">처분결과통보</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="2023년03월18일 감사처리" />
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">담당부서</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="감사부" />
+                    </div>
+                </li>
+                <li class="cell">
+                    <div class="tbl_th">담당자</div>
+                    <div class="tbl_td">
+                        <input type="text" name="" id="" value="황우성" />
+                    </div>
+                </li>
+                <li class="cell-full">
+                    <div class="tbl_th">비고</div>
+                    <div class="tbl_td">
+                        <textarea name="" class="target-textarea" rows="3">내부 종결</textarea>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
 </body>
+
 </html>

@@ -7,73 +7,73 @@
     <link rel="stylesheet" href="./resources/css/main.css">
 </head>
 <body>
-    <h2 class="ai-title">계약심사 신청</h2>
-    <form action="#" class="apply-tbl-list">
-        <ul class="apply-tbl">
-            <li>
-                <span class="apply-tbl_thead">공고기관</span>
-                <div class="apply-tbl_tbody radioFlex">
-                        <div class="inputBox">
-                            <input type="radio" name="submit1-radio" id="submit1-radio1" checked>
-                            <label for="submit1-radio1">학교</label>
+    <h2 class="title">계약심사 신청</h2>
+    <form action="#" class="tbl_form">
+        <ul class="tbl_row">
+            <li class="tbl_tr">
+                <div class="tbl_th">공고기관 <span class="font-small font-red">(필수)</span></div>
+                <div class="tbl_td radioFlex">
+                        <div class="radio_box">
+                            <label class="label_name" for="submit1-radio1">학교</label>
+                            <input class="radio_check" type="radio" name="submit1-radio" id="submit1-radio1" checked>
                         </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit1-radio" id="submit1-radio2">
-                            <label for="submit1-radio2">지원청</label>
+                        <div class="radioBox">
+                            <label class="label_name" for="submit1-radio2">지원청</label>
+                            <input class="radio_check" type="radio" name="submit1-radio" id="submit1-radio2">
                         </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit1-radio" id="submit1-radio3">
-                            <label for="submit1-radio3">직속기관</label>
+                        <div class="radioBox">
+                            <input class="radio_check" type="radio" name="submit1-radio" id="submit1-radio3">
+                            <label class="label_name" for="submit1-radio3">직속기관</label>
                         </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit1-radio" id="submit1-radio4">
-                            <label for="submit1-radio4">교육청</label>
-                        </div>
-                </div>
-            </li>
-            <li>
-                <span class="apply-tbl_thead">심사분야</span>
-                <div class="apply-tbl_tbody radioFlex">
-                        <div class="inputBox">
-                            <input type="radio" name="submit2-radio" id="submit2-radio1" checked>
-                            <label for="submit2-radio1">물품</label>
-                        </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit2-radio" id="submit2-radio2">
-                            <label for="submit2-radio2">공사</label>
-                        </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit2-radio" id="submit2-radio3">
-                            <label for="submit2-radio3">용역</label>
-                        </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit2-radio" id="submit2-radio4">
-                            <label for="submit2-radio4">기타</label>
+                        <div class="radioBox">
+                            <input class="radio_check" type="radio" name="submit1-radio" id="submit1-radio4">
+                            <label class="label_name" for="submit1-radio4">교육청</label>
                         </div>
                 </div>
             </li>
-            <li>
-                <span class="apply-tbl_thead">사업명</span>
-                <div class="apply-tbl_tbody">
-                    <input type="text" name="" id="" value="교육행정 컴퓨터 구매">
+            <li class="tbl_tr">
+                <div class="tbl_th">심사분야 <span class="font-small">(선택)</span></div>
+                <div class="tbl_td radioFlex">
+                        <div class="radioBox">
+                            <input class="radio_check" type="radio" name="submit2-radio" id="submit2-radio1" checked>
+                            <label class="label_name" for="submit2-radio1">물품</label>
+                        </div>
+                        <div class="radioBox">
+                            <input class="radio_check" type="radio" name="submit2-radio" id="submit2-radio2">
+                            <label class="label_name" for="submit2-radio2">공사</label>
+                        </div>
+                        <div class="radioBox">
+                            <input class="radio_check" type="radio" name="submit2-radio" id="submit2-radio3">
+                            <label class="label_name" for="submit2-radio3">용역</label>
+                        </div>
+                        <div class="radioBox">
+                            <input class="radio_check" type="radio" name="submit2-radio" id="submit2-radio4">
+                            <label class="label_name" for="submit2-radio4">기타</label>
+                        </div>
                 </div>
             </li>
-            <li>
-                <span class="apply-tbl_thead">예산금액</span>
-                <div class="apply-tbl_tbody">
-                    <input type="tel" class="font_red" value="50,000,000" oninput="this.value=this.value.replace(/[^,0-9]/g,'');">
+            <li class="tbl_tr">
+                <div class="tbl_th">사업명</div>
+                <div class="tbl_td">
+                    <input type="text" class="input-business" name="" id="" value="교육행정 컴퓨터 구매" title="교육행정 컴퓨터 구매" />
+                </div>
+            </li>
+            <li class="tbl_tr">
+                <div class="tbl_th">예산금액</div>
+                <div class="tbl_td">
+                    <input type="text" class="input-money font-red" value="50,000,000" oninput="this.value=this.value.replace(/[^,0-9]/g,'');">
                     <label for="">원</label>
                 </div>
             </li>
-            <li>
-                <span class="apply-tbl_thead">추정금액</span>
-                <div class="apply-tbl_tbody">
-                    <input type="tel" class="font_blue" value="49,200,000" oninput="this.value=this.value.replace(/[^,0-9]/g,'');">
+            <li class="tbl_tr">
+                <div class="tbl_th">추정금액</div>
+                <div class="tbl_td">
+                    <input type="text" class="input-money font-blue" value="49,200,000" oninput="this.value=this.value.replace(/[^,0-9]/g,'');">
                     <label for="">원</label>
                 </div>
             </li>
         </ul>
-        <div class="apply-btns">
+        <div class="apply-btns-right">
             <button type="reset" class="apply-btn-reset">
                 <span>다시 입력</span>
             </button>
@@ -83,74 +83,73 @@
         </div>
     </form>
 
-    
-    <h2 class="ai-title">계약심사 신청 (태블릿 2단)</h2>
-    <form action="#" class="apply-tbl-list">
-        <ul class="apply-tbl moDouble">
-            <li>
-                <span class="apply-tbl_thead">공고기관</span>
-                <div class="apply-tbl_tbody radioFlex">
-                        <div class="inputBox">
-                            <input type="radio" name="submit3-radio" id="submit3-radio1" checked>
-                            <label for="submit3-radio1">학교</label>
+    <h2 class="title">계약심사 신청 (태블릿 2단)</h2>
+    <form action="#" class="tbl_form">
+        <ul class="tbl_row double">
+            <li class="tbl_tr">
+                <div class="tbl_th">공고기관</div>
+                <div class="tbl_td radioFlex">
+                        <div class="radioBox">
+                            <input type="radio" class="radio_check" name="submit3-radio" id="submit3-radio1" checked>
+                            <label class="label_name" for="submit3-radio1">학교</label>
                         </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit3-radio" id="submit3-radio2">
-                            <label for="submit3-radio2">지원청</label>
+                        <div class="radioBox">
+                            <input type="radio" class="radio_check" name="submit3-radio" id="submit3-radio2">
+                            <label class="label_name" for="submit3-radio2">지원청</label>
                         </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit3-radio" id="submit3-radio3">
-                            <label for="submit3-radio3">직속기관</label>
+                        <div class="radioBox">
+                            <input type="radio" class="radio_check" name="submit3-radio" id="submit3-radio3">
+                            <label class="label_name" for="submit3-radio3">직속기관</label>
                         </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit3-radio" id="submit3-radio4">
-                            <label for="submit3-radio4">교육청</label>
-                        </div>
-                </div>
-            </li>
-            <li>
-                <span class="apply-tbl_thead">심사분야</span>
-                <div class="apply-tbl_tbody radioFlex">
-                        <div class="inputBox">
-                            <input type="radio" name="submit4-radio" id="submit4-radio1" checked>
-                            <label for="submit4-radio1">물품</label>
-                        </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit4-radio" id="submit4-radio2">
-                            <label for="submit4-radio2">공사</label>
-                        </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit4-radio" id="submit4-radio3">
-                            <label for="submit4-radio3">용역</label>
-                        </div>
-                        <div class="inputBox">
-                            <input type="radio" name="submit4-radio" id="submit4-radio4">
-                            <label for="submit4-radio4">기타</label>
+                        <div class="radioBox">
+                            <input type="radio" class="radio_check" name="submit3-radio" id="submit3-radio4">
+                            <label class="label_name" for="submit3-radio4">교육청</label>
                         </div>
                 </div>
             </li>
-            <li>
-                <span class="apply-tbl_thead">사업명</span>
-                <div class="apply-tbl_tbody">
-                    <input type="text" name="" id="" value="교육행정 컴퓨터 구매">
+            <li class="tbl_tr">
+                <div class="tbl_th">심사분야</div>
+                <div class="tbl_td radioFlex">
+                        <div class="radioBox">
+                            <input type="radio" class="radio_check" name="submit4-radio" id="submit4-radio1" checked>
+                            <label class="label_name" for="submit4-radio1">물품</label>
+                        </div>
+                        <div class="radioBox">
+                            <input type="radio" class="radio_check" name="submit4-radio" id="submit4-radio2">
+                            <label class="label_name" for="submit4-radio2">공사</label>
+                        </div>
+                        <div class="radioBox">
+                            <input type="radio" class="radio_check" name="submit4-radio" id="submit4-radio3">
+                            <label class="label_name" for="submit4-radio3">용역</label>
+                        </div>
+                        <div class="radioBox">
+                            <input type="radio" class="radio_check" name="submit4-radio" id="submit4-radio4">
+                            <label class="label_name" for="submit4-radio4">기타</label>
+                        </div>
                 </div>
             </li>
-            <li class="w50">
-                <span class="apply-tbl_thead">예산금액</span>
-                <div class="apply-tbl_tbody">
-                    <input type="tel" class="font_red" value="50,000,000" oninput="this.value=this.value.replace(/[^,0-9]/g,'');">
-                    <label for="">원</label>
+            <li class="tbl_tr">
+                <div class="tbl_th">사업명</div>
+                <div class="tbl_td">
+                    <input type="text" class="input-business" name="" id="" value="교육행정 컴퓨터 구매" title="교육행정 컴퓨터 구매" />
                 </div>
             </li>
-            <li class="w50">
-                <span class="apply-tbl_thead">추정금액</span>
-                <div class="apply-tbl_tbody">
-                    <input type="tel" class="font_blue" value="49,200,000" oninput="this.value=this.value.replace(/[^,0-9]/g,'');">
-                    <label for="">원</label>
+            <li class="tbl_tr">
+                <div class="tbl_th">예산금액</div>
+                <div class="tbl_td">
+                    <input type="text" class="input-money font-red" value="50,000,000" oninput="this.value=this.value.replace(/[^,0-9]/g,'');">
+                    <label class="label_name" for="">원</label>
+                </div>
+            </li>
+            <li class="tbl_tr">
+                <div class="tbl_th">추정금액</div>
+                <div class="tbl_td">
+                    <input type="text" class="input-money font-blue" value="49,200,000" oninput="this.value=this.value.replace(/[^,0-9]/g,'');">
+                    <label class="label_name" for="">원</label>
                 </div>
             </li>
         </ul>
-        <div class="apply-btns">
+        <div class="apply-btns-center">
             <button type="reset" class="apply-btn-reset">
                 <span>다시 입력</span>
             </button>
