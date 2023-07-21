@@ -1,0 +1,19 @@
+@import url(reset.css);
+
+.top_button {
+    width: 80%;
+    height: 2000px;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.top_btn { 
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+	position: fixed;
+	right: 2%;
+	bottom: 5px;
+	display: none;
+	z-index: 9999;
+}                                                                             
