@@ -102,10 +102,6 @@ a {
     color: #fff;
 }
 
-.board_search_group {
-    float: right;
-}
-
 .board_total {
     float: left;
     margin-left: 1em;
@@ -115,6 +111,9 @@ a {
     font-size: 0.889em;
 }
 
+.board_search_group {
+    float: right;
+}
 .board_search_filter {
     width: 15%;
     min-width: 6em;
@@ -149,12 +148,12 @@ a {
 .board_search_filter option {
     background-color: #00306d;
 }
+
 .board_search {
     float: right;
     border: 1px solid #2c89cc;
     border-radius: 0.3em;
 }
-
 .board_search_input,
 .board_search_btn {
     height: 2.222em;
@@ -164,7 +163,6 @@ a {
     display: block;
     float: left;
 }
-
 .board_search_input {
     background: transparent;
     border-radius: 0.3em 0 0 0.3em;
@@ -238,8 +236,8 @@ a {
     }
 }
 
-/* board_table */
-[class*="board_table"] {
+/* board */
+.board {
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -250,27 +248,23 @@ a {
     overflow: hidden;
 }
 
-[class*="board_table"] colgroup .col-num {
+.board colgroup .col_num {
     width: 10%;
 }
-
-[class*="board_table"] colgroup .col-title {
+.board colgroup .col_title {
     width: 55%;
 }
-
-[class*="board_table"] colgroup .col-writer {
+.board colgroup .col_writer {
     width: 12%;
 }
-
-[class*="board_table"] colgroup .col-date {
+.board colgroup .col_date {
     width: 13%;
 }
-
-[class*="board_table"] colgroup .col-view {
+.board colgroup .col_view {
     width: 10%;
 }
 
-[class*="board_table"] thead tr th {
+.board thead tr th {
     background: #e1f1fd;
     height: 2.778em;
     border-right: 1px solid #b0b7c0;
@@ -279,15 +273,16 @@ a {
     font-weight: 500;
 }
 
-[class*="board_table"] tbody tr .col-num {
+.board tbody tr .col_num {
     font-size: 0.889em;
 }
 
-[class*="board_table"] tbody tr:hover {
+.board tbody tr:hover td {
+    cursor: pointer;
     background-color: #f9fafb;
 }
 
-[class*="board_table"] tbody tr td {
+.board tbody tr td {
     padding: 0 1.5em;
     height: 3.333em;
     background: #fff;
@@ -297,7 +292,7 @@ a {
     word-wrap: break-word;
 }
 
-[class*="board_table"] tbody tr td a {
+.board tbody tr td a {
     display: block;
     width: 100%;
     overflow: hidden;
@@ -306,88 +301,134 @@ a {
     text-align: left;
 }
 
-[class*="board_table"] thead tr th:last-child,
-[class*="board_table"] tbody tr td:last-child {
+.board thead tr th:last-of-type,
+.board tbody tr td:last-of-type {
     border-right: 0;
 }
-[class*="board_table"] tbody tr:last-child td {
+.board tbody tr:last-of-type td {
     border-bottom: 0;
 }
 
 @media screen and (max-width:1000px)  {
-    [class*="board_table"] tbody tr td {
+    .board tbody tr td {
         padding: 0 1em;
-    }
-    [class*="board_table"] colgroup .col-view {
-        width: 10%;
     }
 }
 
 @media screen and (max-width:820px) {
-    [class*="board_table"] colgroup .col-writer {
+    .board colgroup .col_title {
+        width: 45%;
+    }
+    .board colgroup .col_writer {
         width: 15%;
     }
-    [class*="board_table"] colgroup .col-date {
+    .board colgroup .col_date {
         width: 18%;
     }
-    [class*="board_table"] colgroup .col-view {
+    .board colgroup .col_view {
         width: 12%;
     }
 }
 
 @media screen and (max-width:650px) {
-    [class*="board_table"] thead tr th {
+    .board thead tr th {
         height: 3.5em;
     }
-    [class*="board_table"] tbody tr td {
+    .board tbody tr td {
         height: 4.25em;
     }
 }
 
 @media screen and (max-width:560px) {
-    .col-hidden {
+    .col_hidden {
         display: none;
+    }
+}
+
+/* PC 5열, 모바일 4열 */
+@media screen and (max-width:560px) {
+    .mobile_colhidden-1 colgroup .col_title {
+        width: 55%;
+    }
+}
+
+/* PC 5열, 모바일 2열 */
+@media screen and (max-width:560px) {
+    .mobile_colhidden-3 colgroup .col_title {
+        width: 70%;
+    }
+    .mobile_colhidden-3 colgroup .col_date {
+        width: 30%;
     }
 }
 
 @media screen and (max-width:460px) {
-    [class*="board_table"] colgroup .col-title {
+    .mobile_colhidden-1 colgroup .col_title {
         width: 45%;
     }
-    [class*="board_table"] colgroup .col-view {
+    .mobile_colhidden-1 colgroup .col_view {
         width: 15%;
     }
 }
 
-/* 반응형 (PC,모바일 테이블 별도) */
-.board_table_cols2 {
+/* 태블릿 레이아웃 변경 */
+.tablet_change tbody tr td .pc_hidden {
     display: none;
 }
 
-@media screen and (max-width:820px) {
-    .board_table_cols5 {
+@media screen and (max-width:750px) {
+    .tablet_change colgroup,
+    .tablet_change thead {
         display: none;
     }
-    .board_table_cols2 {
+    .tablet_change {
         display: table;
     }
-    .board_table_cols2 colgroup .col-title {
-        width: 75%;
+    .tablet_change tbody tr .col_num {
+        font-size: 0.95em;
     }
-    .board_table_cols2 colgroup .col-date {
-        width: 25%;
+    .tablet_change tbody tr td {
+        display: block;
+        float: left;
+        width: 100%;
+        height: auto;
+        padding-bottom: 1em;
+        border-bottom: none;
     }
-    .board_table_cols2 .col-hidden {
-        display: none;
+    .tablet_change tbody tr td:first-of-type {
+        padding-top: 1.5em;
+    }
+    .tablet_change tbody tr td:last-of-type {
+        padding-bottom: 1.5em;
+        border-bottom: 1px solid #b0b7c0;
+        border-right: 1px solid #b0b7c0;
+    }
+
+    .tablet_change tbody tr td .pc_hidden {
+        display: block;
+        float: left;
+        width: 5em;
+        margin-right: 1em;
+        text-align: right;
+        font-weight: 600;
+    }
+    .tablet_change tbody tr td .tbl_td {
+        float: left;
+        width: calc(100% - 7em);
+        text-align: left;
+    }
+
+    .board colgroup .col_num {
+        width: auto;
     }
 }
 
-@media screen and (max-width:350px) {
-    .board_table_cols2 colgroup .col-title {
-        width: 70%;
+@media screen and (max-width:440px) {
+    .tablet_change tbody tr td .pc_hidden {
+        width: 4em;
     }
-    .board_table_cols2 colgroup .col-date {
-        width: 30%;
+    .tablet_change tbody tr td .tbl_td {
+        width: calc(100% - 6em);
     }
 }
 
@@ -398,8 +439,8 @@ a {
     text-align: center;
 }
 
-[class*='arrow_'],
-[class*='page_num'] {
+[class*="arrow_"],
+[class*="page_num"] {
     display: inline-block;
     vertical-align: middle;
     background-color: transparent;
@@ -407,17 +448,17 @@ a {
     font-size: 1.056em;
     margin: 0.5em;
 }
-[class*='arrow_'] {
+[class*="arrow_"] {
     border: 2px solid #74b2f3;
     margin: 0.1em;
     width: 2em;
     height: 2em;
     border-radius: 1em;
 }
-[class*='arrow_']:hover {
+[class*="arrow_"]:hover {
     background-color: #002d69;
 }
-[class*='page_num']:hover {
+[class*="page_num"]:hover {
     color: #74b2f3;
 }
 
@@ -455,7 +496,7 @@ a {
 
 
 @media screen and (max-width:500px) {
-    [class*='arrow_'] {
+    [class*="arrow_"] {
         margin: 0.1em;
     }
     .arrow_prev {
@@ -463,58 +504,5 @@ a {
     }
     .arrow_next {
         margin-left: 0.3em;
-    }
-}
-
-/* 모바일 레이아웃 변경 */
-.board-change tbody tr td .tbl_th {
-    display: none;
-}
-
-@media screen and (max-width:750px) {
-    .board-change [class*="board_table"] colgroup,
-    .board-change [class*="board_table"] thead {
-        display: none;
-    }
-    .board-change [class*="board_table"] {
-        display: table;
-    }
-    .board-change tbody tr td {
-        display: block;
-        float: left;
-        width: 100%;
-        height: auto;
-        padding-bottom: 1em;
-        border-bottom: none;
-    }
-    .board-change tbody tr td .tbl_th {
-        display: block;
-        float: left;
-        width: 5em;
-        text-align: right;
-        font-weight: 600;
-    }
-    .board-change tbody tr td .tbl_td {
-        display: block;
-        float: right;
-        width: calc(100% - 7em); /*모바일 확인하기*/
-        text-align: left;
-    }
-    .board-change tbody tr td:first-of-type {
-        padding-top: 1.5em;
-    }
-    .board-change tbody tr td:last-of-type {
-        padding-bottom: 1.5em;
-        border-bottom: 1px solid #b0b7c0;
-        border-right: 1px solid #b0b7c0;
-    }
-}
-
-@media screen and (max-width:440px) {
-    .board-change tbody tr td .tbl_th {
-        width: 4em;
-    }
-    .board-change tbody tr td .tbl_td {
-        width: calc(100% - 6em);
     }
 }
