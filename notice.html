@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
     <title>06.공지사항</title>
-    <link rel="stylesheet" href="./resources/css/nice-select.css">
-    <link rel="stylesheet" href="./resources/css/notice.css">
     <script src="./resources/js/jquery-3.7.0.min.js" defer></script>
     <script src="./resources/js/jquery.nice-select.js" defer></script>
     <script src="./resources/js/notice.js" defer></script>
+    <link rel="stylesheet" href="./resources/css/nice-select.css">
+    <link rel="stylesheet" href="./resources/css/notice.css">
 </head>
 <body>
     <div class="board_page">
 
-        <!-- 반응형 - 열 숨기기 -->
-        <h2 class="title">공지사항 (반응형 - 열 숨기기)</h2>
+        <!-- PC 5열, 모바일 4열 -->
+        <h2 class="title">공지사항 (PC 5열, 모바일 4열)</h2>
         <div class="board_wrap">
 
             <form class="board_bar">
@@ -37,10 +37,10 @@
                 </div>
             </form>
 
-            <table class="board">
+            <table class="board mobile_colhidden-1">
                 <caption class="blind">공지사항</caption>
                 <colgroup>
-                    <col class="col_num col-hidden">
+                    <col class="col_num col_hidden">
                     <col class="col_title">
                     <col class="col_writer">
                     <col class="col_date">
@@ -48,7 +48,7 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th scope="col" class="col-hidden">번호</th>
+                        <th scope="col" class="col_hidden">번호</th>
                         <th scope="col">제목</th>
                         <th scope="col">작성자</th>
                         <th scope="col">등록일</th>
@@ -57,14 +57,14 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="col-num col-hidden">120</td>
+                        <td class="col_num col_hidden">120</td>
                         <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
                         <td>관리자</td>
                         <td>2023-06-22</td>
                         <td>258</td>
                     </tr>
                     <tr>
-                        <td class="col-num col-hidden">119</td>
+                        <td class="col_num col_hidden">119</td>
                         <td>
                             <a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a>
                         </td>
@@ -73,35 +73,35 @@
                         <td>258</td>
                     </tr>
                     <tr>
-                        <td class="col-num col-hidden">118</td>
+                        <td class="col_num col_hidden">118</td>
                         <td><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></td>
                         <td>관리자</td>
                         <td>2023-06-22</td>
                         <td>258</td>
                     </tr>
                     <tr>
-                        <td class="col-num col-hidden">117</td>
+                        <td class="col_num col_hidden">117</td>
                         <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
                         <td>관리자</td>
                         <td>2023-06-22</td>
                         <td>258</td>
                     </tr>
                     <tr>
-                        <td class="col-num col-hidden">116</td>
+                        <td class="col_num col_hidden">116</td>
                         <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
                         <td>관리자</td>
                         <td>2023-06-22</td>
                         <td>258</td>
                     </tr>
                     <tr>
-                        <td class="col-num col-hidden">115</td>
+                        <td class="col_num col_hidden">115</td>
                         <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
                         <td>관리자</td>
                         <td>2023-06-22</td>
                         <td>258</td>
                     </tr>
                     <tr>
-                        <td class="col-num col-hidden">114</td>
+                        <td class="col_num col_hidden">114</td>
                         <td>
                             <a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a>
                         </td>
@@ -110,21 +110,21 @@
                         <td>258</td>
                     </tr>
                     <tr>
-                        <td class="col-num col-hidden">113</td>
+                        <td class="col_num col_hidden">113</td>
                         <td><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></td>
                         <td>관리자</td>
                         <td>2023-06-22</td>
                         <td>258</td>
                     </tr>
                     <tr>
-                        <td class="col-num col-hidden">112</td>
+                        <td class="col_num col_hidden">112</td>
                         <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
                         <td>관리자</td>
                         <td>2023-06-22</td>
                         <td>258</td>
                     </tr>
                     <tr>
-                        <td class="col-num col-hidden">111</td>
+                        <td class="col_num col_hidden">111</td>
                         <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
                         <td>관리자</td>
                         <td>2023-06-22</td>
@@ -133,6 +133,7 @@
                 </tbody>
             </table>
 
+            <!-- (pagination) PC에서는 10개, 태블릿에서는 5개, 모바일에서는 5개 -->
             <div class="pagination">
                 <a href="#" class="arrow_first" title="맨처음 페이지로 이동됩니다."></a>
                 <a href="#" class="arrow_prev" title="이전 페이지로 이동됩니다."></a>
@@ -151,12 +152,12 @@
             </div>
         </div>
 
-        <!-- 반응형 - PC,모바일 테이블 별도 -->
-        <h2 class="title">공지사항 (반응형 - PC,모바일 테이블 별도)</h2>
+        <!-- PC 5열, 모바일 2열 -->
+        <h2 class="title">공지사항 (PC 5열, 모바일 2열)</h2>
         <div class="board_wrap">
-
-            <div class="board_bar">
-                <span class="board_total">총 120 건</span>
+        
+            <form class="board_bar">
+                <div class="board_total">총 120 건</div>
                 <div class="board_search_group">
                     <select class="board_search_filter">
                         <option value="">10건씩 보기</option>
@@ -173,165 +174,101 @@
                         <button type="submit" class="board_search_btn">검색</button>
                     </div>
                 </div>
-            </div>
-
-                <!-- PC (5열) -->
-                <table class="board_cols5">
-                    <caption class="blind">공지사항(PC)</caption>
-                    <colgroup>
-                        <col class="col-num">
-                        <col class="col-title">
-                        <col class="col-writer">
-                        <col class="col-date">
-                        <col class="col-view">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">제목</th>
-                            <th scope="col">작성자</th>
-                            <th scope="col">등록일</th>
-                            <th scope="col">조회수</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>120</td>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>관리자</td>
-                            <td>2023-06-22</td>
-                            <td>258</td>
-                        </tr>
-                        <tr>
-                            <td>119</td>
-                            <td>
-                                <a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a>
-                            </td>
-                            <td>관리자</td>
-                            <td>2023-06-22</td>
-                            <td>258</td>
-                        </tr>
-                        <tr>
-                            <td>118</td>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>관리자</td>
-                            <td>2023-06-22</td>
-                            <td>258</td>
-                        </tr>
-                        <tr>
-                            <td>117</td>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>관리자</td>
-                            <td>2023-06-22</td>
-                            <td>258</td>
-                        </tr>
-                        <tr>
-                            <td>116</td>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>관리자</td>
-                            <td>2023-06-22</td>
-                            <td>258</td>
-                        </tr>
-                        <tr>
-                            <td>115</td>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>관리자</td>
-                            <td>2023-06-22</td>
-                            <td>258</td>
-                        </tr>
-                        <tr>
-                            <td>114</td>
-                            <td>
-                                <a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a>
-                            </td>
-                            <td>관리자</td>
-                            <td>2023-06-22</td>
-                            <td>258</td>
-                        </tr>
-                        <tr>
-                            <td>113</td>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>관리자</td>
-                            <td>2023-06-22</td>
-                            <td>258</td>
-                        </tr>
-                        <tr>
-                            <td>112</td>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>관리자</td>
-                            <td>2023-06-22</td>
-                            <td>258</td>
-                        </tr>
-                        <tr>
-                            <td>111</td>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>관리자</td>
-                            <td>2023-06-22</td>
-                            <td>258</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- Tablet, Mobile (2열) -->
-                <table class="board_cols2">
-                    <caption class="blind">공지사항(태블릿,모바일)</caption>
-                    <colgroup>
-                        <col class="col-title">
-                        <col class="col-date">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">제목</th>
-                            <th scope="col">등록일</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>2023-06-22</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a>
-                            </td>
-                            <td>2023-06-22</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>2023-06-22</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>2023-06-22</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>2023-06-22</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>2023-06-22</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a>
-                            </td>
-                            <td>2023-06-22</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>2023-06-22</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>2023-06-22</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
-                            <td>2023-06-22</td>
-                        </tr>
-                    </tbody>
-                </table>
-
+            </form>
+        
+            <table class="board mobile_colhidden-3">
+                <caption class="blind">공지사항(태블릿,모바일 2열)</caption>
+                <colgroup>
+                    <col class="col_num col_hidden">
+                    <col class="col_title">
+                    <col class="col_writer col_hidden">
+                    <col class="col_date">
+                    <col class="col_view col_hidden">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" class="col_hidden">번호</th>
+                        <th scope="col">제목</th>
+                        <th scope="col" class="col_hidden">작성자</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col" class="col_hidden">조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col_num col_hidden">120</td>
+                        <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
+                        <td class="col_hidden">관리자</td>
+                        <td>2023-06-22</td>
+                        <td class="col_hidden">258</td>
+                    </tr>
+                    <tr>
+                        <td class="col_num col_hidden">119</td>
+                        <td><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></td>
+                        <td class="col_hidden">관리자</td>
+                        <td>2023-06-22</td>
+                        <td class="col_hidden">258</td>
+                    </tr>
+                    <tr>
+                        <td class="col_num col_hidden">118</td>
+                        <td><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></td>
+                        <td class="col_hidden">관리자</td>
+                        <td>2023-06-22</td>
+                        <td class="col_hidden">258</td>
+                    </tr>
+                    <tr>
+                        <td class="col_num col_hidden">117</td>
+                        <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
+                        <td class="col_hidden">관리자</td>
+                        <td>2023-06-22</td>
+                        <td class="col_hidden">258</td>
+                    </tr>
+                    <tr>
+                        <td class="col_num col_hidden">116</td>
+                        <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
+                        <td class="col_hidden">관리자</td>
+                        <td>2023-06-22</td>
+                        <td class="col_hidden">258</td>
+                    </tr>
+                    <tr>
+                        <td class="col_num col_hidden">115</td>
+                        <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
+                        <td class="col_hidden">관리자</td>
+                        <td>2023-06-22</td>
+                        <td class="col_hidden">258</td>
+                    </tr>
+                    <tr>
+                        <td class="col_num col_hidden">114</td>
+                        <td><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></td>
+                        <td class="col_hidden">관리자</td>
+                        <td>2023-06-22</td>
+                        <td class="col_hidden">258</td>
+                    </tr>
+                    <tr>
+                        <td class="col_num col_hidden">113</td>
+                        <td><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></td>
+                        <td class="col_hidden">관리자</td>
+                        <td>2023-06-22</td>
+                        <td class="col_hidden">258</td>
+                    </tr>
+                    <tr>
+                        <td class="col_num col_hidden">112</td>
+                        <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
+                        <td class="col_hidden">관리자</td>
+                        <td>2023-06-22</td>
+                        <td class="col_hidden">258</td>
+                    </tr>
+                    <tr>
+                        <td class="col_num col_hidden">111</td>
+                        <td><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></td>
+                        <td class="col_hidden">관리자</td>
+                        <td>2023-06-22</td>
+                        <td class="col_hidden">258</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <!-- (pagination) PC에서는 10개, 태블릿에서는 5개, 모바일에서는 5개 -->
             <div class="pagination">
                 <a href="#" class="arrow_first" title="맨처음 페이지로 이동됩니다."></a>
                 <a href="#" class="arrow_prev" title="이전 페이지로 이동됩니다."></a>
@@ -348,42 +285,41 @@
                 <a href="#" class="arrow_next" title="다음 페이지로 이동됩니다."></a>
                 <a href="#" class="arrow_last" title="맨마지막 페이지로 이동됩니다."></a>
             </div>
-            <!-- PC에서는 10개, 태블릿에서는 5개, 모바일에서는 5개 -->
         </div>
 
-        <!-- 모바일 레이아웃 변경 -->
-        <h2 class="title">공지사항 (모바일 레이아웃 변경)</h2>
+        <!-- 태블릿 레이아웃 변경 -->
+        <h2 class="title">공지사항 (태블릿 레이아웃 변경)</h2>
         <div class="board_wrap">
-
-            <div class="board_bar">
-                <span class="board_total">총 120 건</span>
-                <div class="board_search_group">
-                    <select class="board_search_filter">
-                        <option value="">10건씩 보기</option>
-                        <option value="">20건씩 보기</option>
-                        <option value="">30건씩 보기</option>
-                    </select>
-                    <select class="board_search_filter">
-                        <option value="">제목 + 내용</option>
-                        <option value="">제목</option>
-                        <option value="">내용</option>
-                    </select>
-                    <div class="board_search">
-                        <input type="text" class="board_search_input">
-                        <button type="submit" class="board_search_btn">검색</button>
-                    </div>
-                </div>
-            </div>
-
+        
             <div class="board_wrap">
-                <table class="board board-change">
+                <form class="board_bar">
+                    <div class="board_total">총 120 건</div>
+                    <div class="board_search_group">
+                        <select class="board_search_filter">
+                            <option value="">10건씩 보기</option>
+                            <option value="">20건씩 보기</option>
+                            <option value="">30건씩 보기</option>
+                        </select>
+                        <select class="board_search_filter">
+                            <option value="">제목 + 내용</option>
+                            <option value="">제목</option>
+                            <option value="">내용</option>
+                        </select>
+                        <div class="board_search">
+                            <input type="text" class="board_search_input">
+                            <button type="submit" class="board_search_btn">검색</button>
+                        </div>
+                    </div>
+                </form>
+        
+                <table class="board tablet_change">
                     <caption class="blind">공지사항</caption>
                     <colgroup>
-                        <col class="col-num">
-                        <col class="col-title">
-                        <col class="col-writer">
-                        <col class="col-date">
-                        <col class="col-view">
+                        <col class="col_num">
+                        <col class="col_title">
+                        <col class="col_writer">
+                        <col class="col_date">
+                        <col class="col_view">
                     </colgroup>
                     <thead>
                         <tr>
@@ -397,245 +333,246 @@
                     <tbody>
                         <tr>
                             <td>
-                                <div class="tbl_th">번호</div>
-                                <div class="tbl_td">120</div>
+                                <div class="pc_hidden">번호</div>
+                                <div class="tbl_td col_num">120</div>
                             </td>
                             <td>
-                                <span class="tbl_th">제목</span>
-                                <span class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span>
+                                <div class="pc_hidden">제목</div>
+                                <div class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></div>
                             </td>
                             <td>
-                                <span class="tbl_th">작성자</span>
-                                <span class="tbl_td">관리자</span>
+                                <div class="pc_hidden">작성자</div>
+                                <div class="tbl_td">관리자</div>
                             </td>
                             <td>
-                                <span class="tbl_th">등록일</span>
-                                <span class="tbl_td">2023-06-22</span>
+                                <div class="pc_hidden">등록일</div>
+                                <div class="tbl_td">2023-06-22</div>
                             </td>
                             <td>
-                                <span class="tbl_th">조회수</span>
-                                <span class="tbl_td">258</span>
+                                <div class="pc_hidden">조회수</div>
+                                <div class="tbl_td">258</div>
                             </td>
                         </tr>
                         <tr>
-                            <td class="cell-first">
-                                <span class="tbl_th">번호</span>
-                                <span class="tbl_td">119</span>
+                            <td>
+                                <div class="pc_hidden">번호</div>
+                                <div class="tbl_td col_num">119</div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">제목</span>
-                                <span class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></span>
+                            <td>
+                                <div class="pc_hidden">제목</div>
+                                <div class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">작성자</span>
-                                <span class="tbl_td">관리자</span>
+                            <td>
+                                <div class="pc_hidden">작성자</div>
+                                <div class="tbl_td">관리자</div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">등록일</span>
-                                <span class="tbl_td">2023-06-22</span>
+                            <td>
+                                <div class="pc_hidden">등록일</div>
+                                <div class="tbl_td">2023-06-22</div>
                             </td>
-                            <td class="cell-last">
-                                <span class="tbl_th">조회수</span>
-                                <span class="tbl_td">258</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cell-first">
-                                <span class="tbl_th">번호</span>
-                                <span class="tbl_td">118</span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">제목</span>
-                                <span class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템
-                                        서비스 안내입니다</a></span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">작성자</span>
-                                <span class="tbl_td">관리자</span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">등록일</span>
-                                <span class="tbl_td">2023-06-22</span>
-                            </td>
-                            <td class="cell-last">
-                                <span class="tbl_th">조회수</span>
-                                <span class="tbl_td">258</span>
+                            <td>
+                                <div class="pc_hidden">조회수</div>
+                                <div class="tbl_td">258</div>
                             </td>
                         </tr>
                         <tr>
-                            <td class="cell-first">
-                                <span class="tbl_th">번호</span>
-                                <span class="tbl_td">117</span>
+                            <td>
+                                <div class="pc_hidden">번호</div>
+                                <div class="tbl_td col_num">118</div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">제목</span>
-                                <span class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span>
+                            <td>
+                                <div class="pc_hidden">제목</div>
+                                <div class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템
+                                        서비스 안내입니다</a></div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">작성자</span>
-                                <span class="tbl_td">관리자</span>
+                            <td>
+                                <div class="pc_hidden">작성자</div>
+                                <div class="tbl_td">관리자</div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">등록일</span>
-                                <span class="tbl_td">2023-06-22</span>
+                            <td>
+                                <div class="pc_hidden">등록일</div>
+                                <div class="tbl_td">2023-06-22</div>
                             </td>
-                            <td class="cell-last">
-                                <span class="tbl_th">조회수</span>
-                                <span class="tbl_td">258</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cell-first">
-                                <span class="tbl_th">번호</span>
-                                <span class="tbl_td">116</span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">제목</span>
-                                <span class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">작성자</span>
-                                <span class="tbl_td">관리자</span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">등록일</span>
-                                <span class="tbl_td">2023-06-22</span>
-                            </td>
-                            <td class="cell-last">
-                                <span class="tbl_th">조회수</span>
-                                <span class="tbl_td">258</span>
+                            <td>
+                                <div class="pc_hidden">조회수</div>
+                                <div class="tbl_td">258</div>
                             </td>
                         </tr>
                         <tr>
-                            <td class="cell-first">
-                                <span class="tbl_th">번호</span>
-                                <span class="tbl_td">115</span>
+                            <td>
+                                <div class="pc_hidden">번호</div>
+                                <div class="tbl_td col_num">117</div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">제목</span>
-                                <span class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span>
+                            <td>
+                                <div class="pc_hidden">제목</div>
+                                <div class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">작성자</span>
-                                <span class="tbl_td">관리자</span>
+                            <td>
+                                <div class="pc_hidden">작성자</div>
+                                <div class="tbl_td">관리자</div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">등록일</span>
-                                <span class="tbl_td">2023-06-22</span>
+                            <td>
+                                <div class="pc_hidden">등록일</div>
+                                <div class="tbl_td">2023-06-22</div>
                             </td>
-                            <td class="cell-last">
-                                <span class="tbl_th">조회수</span>
-                                <span class="tbl_td">258</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cell-first">
-                                <span class="tbl_th">번호</span>
-                                <span class="tbl_td">114</span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">제목</span>
-                                <span class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">작성자</span>
-                                <span class="tbl_td">관리자</span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">등록일</span>
-                                <span class="tbl_td">2023-06-22</span>
-                            </td>
-                            <td class="cell-last">
-                                <span class="tbl_th">조회수</span>
-                                <span class="tbl_td">258</span>
+                            <td>
+                                <div class="pc_hidden">조회수</div>
+                                <div class="tbl_td">258</div>
                             </td>
                         </tr>
                         <tr>
-                            <td class="cell-first">
-                                <span class="tbl_th">번호</span>
-                                <span class="tbl_td">113</span>
+                            <td>
+                                <div class="pc_hidden">번호</div>
+                                <div class="tbl_td col_num">116</div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">제목</span>
-                                <span class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템
-                                        서비스 안내입니다</a></span>
+                            <td>
+                                <div class="pc_hidden">제목</div>
+                                <div class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">작성자</span>
-                                <span class="tbl_td">관리자</span>
+                            <td>
+                                <div class="pc_hidden">작성자</div>
+                                <div class="tbl_td">관리자</div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">등록일</span>
-                                <span class="tbl_td">2023-06-22</span>
+                            <td>
+                                <div class="pc_hidden">등록일</div>
+                                <div class="tbl_td">2023-06-22</div>
                             </td>
-                            <td class="cell-last">
-                                <span class="tbl_th">조회수</span>
-                                <span class="tbl_td">258</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cell-first">
-                                <span class="tbl_th">번호</span>
-                                <span class="tbl_td">112</span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">제목</span>
-                                <span class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">작성자</span>
-                                <span class="tbl_td">관리자</span>
-                            </td>
-                            <td class="cell">
-                                <span class="tbl_th">등록일</span>
-                                <span class="tbl_td">2023-06-22</span>
-                            </td>
-                            <td class="cell-last">
-                                <span class="tbl_th">조회수</span>
-                                <span class="tbl_td">258</span>
+                            <td>
+                                <div class="pc_hidden">조회수</div>
+                                <div class="tbl_td">258</div>
                             </td>
                         </tr>
                         <tr>
-                            <td class="cell-first">
-                                <span class="tbl_th">번호</span>
-                                <span class="tbl_td">111</span>
+                            <td>
+                                <div class="pc_hidden">번호</div>
+                                <div class="tbl_td col_num">115</div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">제목</span>
-                                <span class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></span>
+                            <td>
+                                <div class="pc_hidden">제목</div>
+                                <div class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">작성자</span>
-                                <span class="tbl_td">관리자</span>
+                            <td>
+                                <div class="pc_hidden">작성자</div>
+                                <div class="tbl_td">관리자</div>
                             </td>
-                            <td class="cell">
-                                <span class="tbl_th">등록일</span>
-                                <span class="tbl_td">2023-06-22</span>
+                            <td>
+                                <div class="pc_hidden">등록일</div>
+                                <div class="tbl_td">2023-06-22</div>
                             </td>
-                            <td class="cell-last">
-                                <span class="tbl_th">조회수</span>
-                                <span class="tbl_td">258</span>
+                            <td>
+                                <div class="pc_hidden">조회수</div>
+                                <div class="tbl_td">258</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pc_hidden">번호</div>
+                                <div class="tbl_td col_num">114</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">제목</div>
+                                <div class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다</a></div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">작성자</div>
+                                <div class="tbl_td">관리자</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">등록일</div>
+                                <div class="tbl_td">2023-06-22</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">조회수</div>
+                                <div class="tbl_td">258</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pc_hidden">번호</div>
+                                <div class="tbl_td col_num">113</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">제목</div>
+                                <div class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템 서비스 안내입니다지능형 감사정보시스템
+                                        서비스 안내입니다</a></div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">작성자</div>
+                                <div class="tbl_td">관리자</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">등록일</div>
+                                <div class="tbl_td">2023-06-22</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">조회수</div>
+                                <div class="tbl_td">258</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pc_hidden">번호</div>
+                                <div class="tbl_td col_num">112</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">제목</div>
+                                <div class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">작성자</div>
+                                <div class="tbl_td">관리자</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">등록일</div>
+                                <div class="tbl_td">2023-06-22</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">조회수</div>
+                                <div class="tbl_td">258</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pc_hidden">번호</div>
+                                <div class="tbl_td col_num">111</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">제목</div>
+                                <div class="tbl_td"><a href="#">지능형 감사정보시스템 서비스 안내입니다</a></div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">작성자</div>
+                                <div class="tbl_td">관리자</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">등록일</div>
+                                <div class="tbl_td">2023-06-22</div>
+                            </td>
+                            <td>
+                                <div class="pc_hidden">조회수</div>
+                                <div class="tbl_td">258</div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-
-            <div class="pagination">
-                <a href="#" class="arrow_first" title="맨처음 페이지로 이동됩니다."></a>
-                <a href="#" class="arrow_prev" title="이전 페이지로 이동됩니다."></a>
-                <a href="#" class="page_num" title="111 페이지로 이동됩니다.">111</a>
-                <a href="#" class="page_num" title="112 페이지로 이동됩니다.">112</a>
-                <a href="#" class="page_num active" title="113 페이지로 이동됩니다.">113</a>
-                <a href="#" class="page_num" title="114 페이지로 이동됩니다.">114</a>
-                <a href="#" class="page_num" title="115 페이지로 이동됩니다.">115</a>
-                <a href="#" class="page_num num-hidden" title="116 페이지로 이동됩니다.">116</a>
-                <a href="#" class="page_num num-hidden" title="117 페이지로 이동됩니다.">117</a>
-                <a href="#" class="page_num num-hidden" title="118 페이지로 이동됩니다.">118</a>
-                <a href="#" class="page_num num-hidden" title="119 페이지로 이동됩니다.">119</a>
-                <a href="#" class="page_num num-hidden" title="120 페이지로 이동됩니다.">120</a>
-                <a href="#" class="arrow_next" title="다음 페이지로 이동됩니다."></a>
-                <a href="#" class="arrow_last" title="맨마지막 페이지로 이동됩니다."></a>
+        
+                <!-- (pagination) PC에서는 10개, 태블릿에서는 5개, 모바일에서는 5개 -->
+                <div class="pagination">
+                    <a href="#" class="arrow_first" title="맨처음 페이지로 이동됩니다."></a>
+                    <a href="#" class="arrow_prev" title="이전 페이지로 이동됩니다."></a>
+                    <a href="#" class="page_num" title="111 페이지로 이동됩니다.">111</a>
+                    <a href="#" class="page_num" title="112 페이지로 이동됩니다.">112</a>
+                    <a href="#" class="page_num active" title="113 페이지로 이동됩니다.">113</a>
+                    <a href="#" class="page_num" title="114 페이지로 이동됩니다.">114</a>
+                    <a href="#" class="page_num" title="115 페이지로 이동됩니다.">115</a>
+                    <a href="#" class="page_num num-hidden" title="116 페이지로 이동됩니다.">116</a>
+                    <a href="#" class="page_num num-hidden" title="117 페이지로 이동됩니다.">117</a>
+                    <a href="#" class="page_num num-hidden" title="118 페이지로 이동됩니다.">118</a>
+                    <a href="#" class="page_num num-hidden" title="119 페이지로 이동됩니다.">119</a>
+                    <a href="#" class="page_num num-hidden" title="120 페이지로 이동됩니다.">120</a>
+                    <a href="#" class="arrow_next" title="다음 페이지로 이동됩니다."></a>
+                    <a href="#" class="arrow_last" title="맨마지막 페이지로 이동됩니다."></a>
+                </div>
             </div>
         </div>
 
