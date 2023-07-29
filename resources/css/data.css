@@ -279,7 +279,7 @@ li {
 }
 
 /* Table CSS - Blue */
-.form-blue ul li [class*="tbl_"],
+.form-blue .form_ul .cell,
 .form-blue thead tr th,
 .form-blue tbody tr td {
     border-bottom: 1px solid #89bbe2;
@@ -319,7 +319,7 @@ li {
 }
 
 /* Table CSS - Yellow */
-.form-yellow ul li [class*="tbl_"],
+.form-yellow .form_ul .cell,
 .form-yellow thead tr th,
 .form-yellow tbody tr td {
     border-bottom: 1px solid #88b4ec;
@@ -573,7 +573,16 @@ input.upload-name {
     height: 1.5em;
 }
 input#input-file {
-    display: none;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
 }
 
 .form_tbl tbody tr .cell_file2 .cell_td p {
